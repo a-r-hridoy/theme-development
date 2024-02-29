@@ -5,15 +5,15 @@
   assign enable_search = section.settings.enable_search_box
 %}
 
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    {% if logo != nil %}
+    {% if logo != null %}
       <img
         src="{{ logo | img_url }}"
         alt="{{ shop.name }}"
         width="100"
-        height="100">
+        height="100"
+      >
 
     {% else %}
       <a class="navbar-brand" href="#">{{ shop.name }}</a>
@@ -25,21 +25,23 @@
       data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
-      aria-label="Toggle navigation">
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         {% for link in menu.links %}
           <li class="nav-item {% if link.links.size > 0 %} dropdown {% endif %}">
             <a
               class="nav-link {% if link.links.size > 0 %}dropdown-toggle dropdown-toggle_{{ forloop.index }}{% endif %}"
               href="{{ link.url }}"
               {% if link.links.size > 0 %}
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              {% endif %}>
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              {% endif %}
+            >
               {{ link.title }}
             </a>
             {% if link.links.size > 0 %}
@@ -60,7 +62,8 @@
             class="form-control me-2"
             type="search"
             placeholder="Search"
-            aria-label="Search">
+            aria-label="Search"
+          >
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       {% endif %}
@@ -68,187 +71,187 @@
   </div>
 </nav>
 
-
-{% comment %} <!-- navbar-start -->
-    <nav class="navbar navbar-expand-xl">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="{{ logo | img_url }}"
-            alt="{{ shop.name }}"
-            width="100"
-            height="100"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            {% for in menu.links %}
+{% comment %}
+  <!-- navbar-start -->
+      <nav class="navbar navbar-expand-xl">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="{{ logo | img_url }}"
+              alt="{{ shop.name }}"
+              width="100"
+              height="100"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              {% for in menu.links %}
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{{ link.url }}">{{ link.title }}</a>
+                <div class="page-drop">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#">page
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </a>
+
+                  <div class="page-item shadow-sm mb-5 bg-body rounded">
+                    <ul class="">
+                      <li>
+                        <a href="product.html" href="product.html">
+                          <span>All products</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="product-grid.html" href="product-grid.html">
+                          <span>product grid view</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="product-list.html" href="product-list.html">
+                          <span>product list view</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="product-details.html" href="product-details.html">
+                          <span>product details</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="sign-up.html">
+                          <span>sign-up</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-            {% endfor %}
-            <li class="nav-item">
-              <div class="page-drop">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="#">page
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </a>
-    
-                <div class="page-item shadow-sm mb-5 bg-body rounded">
-                  <ul class="">
-                    <li>
-                      <a href="product.html" href="product.html">
-                        <span>All products</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="product-grid.html" href="product-grid.html">
-                        <span>product grid view</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="product-list.html" href="product-list.html">
-                        <span>product list view</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="product-details.html" href="product-details.html">
-                        <span>product details</span>
-                      </a>
-                    </li>
-    
-                    <li>
-                      <a href="sign-up.html">
-                        <span>sign-up</span>
-                      </a>
-                    </li>
-                  </ul>
+              <li class="nav-item">
+                <div class="page-drop">
+                  <a
+                    class="nav-link"
+                    aria-current="blog"
+                    href="#">blog
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </a>
+
+                  <div class="page-item shadow-sm mb-5 bg-body rounded">
+                    <ul class="">
+                      <li>
+                        <a href="blog.html">
+                          <span>blog</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="blog-details-1.html">
+                          <span>blog-details-1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="blog-details-2.html">
+                          <span>blog-details-2</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <div class="page-drop">
-                <a
-                  class="nav-link"
-                  aria-current="blog"
-                  href="#">blog
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </a>
-    
-                <div class="page-item shadow-sm mb-5 bg-body rounded">
-                  <ul class="">
-                    <li>
-                      <a href="blog.html">
-                        <span>blog</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="blog-details-1.html">
-                        <span>blog-details-1</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="blog-details-2.html">
-                        <span>blog-details-2</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-    
-        <div class="nav-right">
-          <form class="d-flex" role="search">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Search here"
-              aria-label="Search" />
-            <button class=" " type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-    
-          <div class="nav-icon d-flex align-items-center">
-            <div class="account">
-              <img
-                src="{{ user_img | img_url }}"
-                alt="user_name"
-                width="50"
-                height="50">
-              <div class="account-drop">
-                <ul>
-                  <li><a href="#">Log in</a></li>
-                  <li><a href="#">Dashboard</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">
-                <a>
-                  <i
-                    class="fa-sharp fa-light fa-cart-shopping"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample"
-                    aria-controls="offcanvasExample"></i>
-                </a>
-                <span>1</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-right">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search here"
+                aria-label="Search" />
+              <button class=" " type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
               </button>
+            </form>
+
+            <div class="nav-icon d-flex align-items-center">
+              <div class="account">
+                <img
+                  src="{{ user_img | img_url }}"
+                  alt="user_name"
+                  width="50"
+                  height="50">
+                <div class="account-drop">
+                  <ul>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <a>
+                    <i
+                      class="fa-sharp fa-light fa-cart-shopping"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasExample"
+                      aria-controls="offcanvasExample"></i>
+                  </a>
+                  <span>1</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-<!-- navbar-end --> {% endcomment %}
-
+      </nav>
+  <!-- navbar-end -->
+{% endcomment %}
 
 {% schema %}
-  {
-    "name": "Header",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "Select logo",
-        "info": "Recommnended siz: 100x100px"
-      },
-      {
-        "type": "image_picker",
-        "id": "user_img",
-        "label": "Select user_img",
-        "info": "Recommnended siz: 50x50px"
-      },
-      {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Select Menu"
-      },
-      {
-        "type": "header",
-        "content": "Search bar"
-      }, {
-        "type": "checkbox",
-        "id": "enable_search_box",
-        "label": "Enable_search_box",
-        "default": true
-      }
-    ]
-  }
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Select logo",
+      "info": "Recommnended siz: 100x100px"
+    },
+    {
+      "type": "image_picker",
+      "id": "user_img",
+      "label": "Select user_img",
+      "info": "Recommnended siz: 50x50px"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Select Menu"
+    },
+    {
+      "type": "header",
+      "content": "Search bar"
+    }, {
+      "type": "checkbox",
+      "id": "enable_search_box",
+      "label": "Enable_search_box",
+      "default": true
+    }
+  ]
+}
 {% endschema %}
