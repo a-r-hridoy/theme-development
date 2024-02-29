@@ -1,0 +1,11 @@
+.navbar {
+   background-color: #000;
+}
+.navbar .navbar-collapse ul li a {
+   font-size: 17px;
+   margin: 0 7px;
+   font-weight: 400;
+   text-transform: capitalize;
+   color: #fff;
+   transition: 0.5s;
+}
