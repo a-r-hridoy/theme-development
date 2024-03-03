@@ -1,5 +1,6 @@
 {
   "current": {
+    "social_facebook_link": "",
     "sections": {
       "collection-list": {
         "type": "collection-list",
@@ -59,13 +60,21 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "footer_linklist": "footer",
+          "footer_linklist": "",
           "show_payment_icons": false
+        }
+      },
+      "slider_eGiE8a": {
+        "type": "slider",
+        "settings": {
+          "heading": "Product Slideshow",
+          "feature_collection": "mens"
         }
       }
     },
     "content_for_index": [
-      "featured-product"
+      "featured-product",
+      "slider_eGiE8a"
     ]
   },
   "presets": {
