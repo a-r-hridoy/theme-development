@@ -26,6 +26,24 @@
   </div>
 </section>
 
+{{ 'theme.css' | asset_url }}
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 5000, // autoplay delay in milliseconds
+    },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+
 
 {% schema %}
   {
