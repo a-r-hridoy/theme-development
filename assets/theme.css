@@ -1,36 +1,4 @@
-.feature-section {
-   padding: 40px 0;
-}
-
-.feature-section .container {
-   max-width: 1200px;
+#slideshow .wrapper {
+   max-width: 1300px;
    margin: 0 auto;
-   text-align: center;
-}
-
-.feature-section h2 {
-   font-size: 36px;
-   margin-bottom: 20px;
-}
-
-.feature-section p {
-   font-size: 18px;
-   color: #666;
-   margin-bottom: 40px;
-}
-
-.features {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}
-
-.feature {
-   flex: 1 1 300px;
-   margin: 0 20px;
-}
-
-.feature h3 {
-   font-size: 24px;
-   margin-bottom: 10px;
 }
