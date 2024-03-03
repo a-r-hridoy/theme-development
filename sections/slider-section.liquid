@@ -1,107 +1,45 @@
-<!-- Slider main container -->
-<div class="swiper-container">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    {% for block in section.blocks %}
-      <div class="swiper-container" data-autoplay-delay="{{ section.settings.autoplay_delay | default: 5000 }}">
-        <div class="swiper-slide" style="background-image: url('{{ block.settings.slide_image | img_url}}');">
-
-          <div class="slide-content">
-            <h2>{{ block.settings.slide_title }}</h2>
-            <p>{{ block.settings.slide_text }}</p>
-            {% if block.settings.slide_button_url != blank %}
-              <a href="{{ block.settings.slide_button_url }}" class="slide-link">{{ block.settings.slide_button_text
-}}</a>
-            {% endif %}
-          </div>
+<section class="feature-section">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <div class="features">
+      {% for feature in section.settings.features %}
+        <div class="feature">
+          <h3>{{ feature.feature }}</h3>
+        <!-- Add any additional styling or markup for features -->
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
-
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-      var swiperContainer = document.querySelector('.swiper-container');
-      var autoplayDelay = swiperContainer.dataset.autoplayDelay; // Access the data attribute
-  
-      var mySwiper = new Swiper('.swiper-container', {
-         loop: true,
-         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-         },
-         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-         },
-         autoplay: {
-            delay: autoplayDelay,
-            disableOnInteraction: false,
-         },
-      });
-   });
-</script>
+</section>
 
 
 {% schema %}
   {
-    "name": "Dynamic Slider",
+    "name": "Feature Section",
     "settings": [
       {
         "type": "text",
-        "id": "autoplay_delay",
-        "label": "Autoplay delay (ms)",
-        "default": 5000
-      }
-    ],
-    "blocks": [
-      {
-        "type": "slide",
-        "name": "Slide",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "slide_image",
-            "label": "Slide image"
-          },
-          {
-            "type": "text",
-            "id": "slide_title",
-            "label": "Slide title",
-            "default": "Your title here"
-          },
-          {
-            "type": "textarea",
-            "id": "slide_text",
-            "label": "Slide text",
-            "default": "Your text here"
-          },
-          {
-            "type": "text",
-            "id": "slide_button_text",
-            "label": "Button text",
-            "default": "Shop Now"
-          }, {
-            "type": "url",
-            "id": "slide_button_url",
-            "label": "Button URL"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Default Slider",
-        "category": "Image"
+        "id": "title",
+        "label": "Section Title",
+        "default": "Our Features"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Section Description",
+        "default": "Explore our amazing features!"
+      }, {
+        "type": "link_list",
+        "id": "features",
+        "label": "Features",
+        "max_items": 4,
+        "itemType": {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature"
+        }
       }
     ]
   }
+
 {% endschema %}
