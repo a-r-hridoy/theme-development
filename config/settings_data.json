@@ -66,9 +66,30 @@
       },
       "slider_eGiE8a": {
         "type": "slider",
+        "blocks": {
+          "slide_UnJbBm": {
+            "type": "slide",
+            "settings": {
+              "slide_image": "shopify:\/\/shop_images\/134282629.jpg",
+              "slide_title": "Slide Title",
+              "slide_caption": "Slide Caption"
+            }
+          },
+          "slide_Xpaa7F": {
+            "type": "slide",
+            "settings": {
+              "slide_image": "shopify:\/\/shop_images\/red-plaid-shirt_925x_80c9da70-1a16-469d-a132-750c1adafb0f.jpg",
+              "slide_title": "Slide Title",
+              "slide_caption": "Slide Caption"
+            }
+          }
+        },
+        "block_order": [
+          "slide_UnJbBm",
+          "slide_Xpaa7F"
+        ],
         "settings": {
-          "heading": "Product Slideshow",
-          "feature_collection": "mens"
+          "section_title": "Welcome to our slideshow"
         }
       }
     },
