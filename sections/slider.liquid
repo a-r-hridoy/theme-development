@@ -3,53 +3,48 @@
 
 
 <!-- slideshow-section.liquid -->
-
 <section class="slideshow-section">
   <div class="container">
     <h2>{{ section.settings.section_title }}</h2>
-    <div class="slider-box">
-      <div class="owl-carousel">
-        {% for block in section.blocks %}
-          <div class="item">
-            <img
-              src="{{ block.settings.slide_image | img_url: 'large' }}"
-              alt="{{ block.settings.slide_title }}"
-              width="100%"
-              height="100%">
-            <div class="slide-content">
-              <h3>{{ block.settings.slide_title }}</h3>
-              <p>{{ block.settings.slide_caption }}</p>
-            </div>
+    <div class="slider-box owl-carousel">
+      {% for block in section.blocks %}
+        <div class="item">
+          <img
+            src="{{ block.settings.slide_image | img_url: 'large' }}"
+            alt="{{ block.settings.slide_title }} "
+            width="auto"
+            height="auto">
+          <div class="slide-content">
+            <h3>{{ block.settings.slide_title }}</h3>
+            <p>{{ block.settings.slide_caption }}</p>
           </div>
-        {% endfor %}
-      </div>
-
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-{{ 'theme.css' | asset_url }}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
 
 <script>
   $(document).ready(function(){
     $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      autoplay:true,
-      autoplayTimeout:5000, // autoplay delay in milliseconds
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
+      loop: true,
+      margin: 10,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
       }
     });
   });
