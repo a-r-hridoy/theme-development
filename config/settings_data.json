@@ -82,11 +82,20 @@
               "slide_title": "Slide Title",
               "slide_caption": "Slide Caption"
             }
+          },
+          "slide_ptewAV": {
+            "type": "slide",
+            "settings": {
+              "slide_image": "shopify:\/\/shop_images\/smiling-woman-poses_925x_af14e51c-2803-438d-895b-1bb60218b8b4.jpg",
+              "slide_title": "Slide Title",
+              "slide_caption": "Slide Caption"
+            }
           }
         },
         "block_order": [
           "slide_UnJbBm",
-          "slide_Xpaa7F"
+          "slide_Xpaa7F",
+          "slide_ptewAV"
         ],
         "settings": {
           "section_title": "Welcome to our slideshow"
