@@ -4,15 +4,15 @@
       <h2>{{ section.settings.heading }}</h2>
     </center>
     <div class="rslides_container">
-      <ul class="rslides">
+      <ul class="rslides" id="slider">
         {% for product in collection[section.settings.feature_collection].products %}
-          <li class="slideshow">
+          <li class="slideshow-items">
             <a href="{{ product.url }}">
               <img
-                src="{{ product.featured_image | img_url }}"
-                alt="{{ block.settings.slide_heading }}"
-                width="100"
-                height="100">
+                src="{{ product.feature_image | image_url: 'medium'}}"
+                alt="{{ product.collection name }}"
+                width="100%"
+                height="100%">
             </a>
             <h3>{{ product.title }}</h3>
             <h4>{{ product.price | money | remove: '.00' }}</h4>
