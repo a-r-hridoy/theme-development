@@ -4,9 +4,9 @@
       <h2>{{ section.settings.heading }}</h2>
     </center>
     <div class="rslides_container">
-      <ul class="rslides" id="slider">
+      <ul class="rslides">
         {% for product in collection[section.settings.feature_collection].products %}
-          <li class="slideshow-items">
+          <li class="slideshow">
             <a href="{{ product.url }}">
               <img
                 src="{{ product.feature_image | image_url: 'medium'}}"
