@@ -1,0 +1,112 @@
+<link href="{{ 'slider-styles.css' | asset_url }}" rel="stylesheet" type="text/css">
+
+<!-- Slider main container -->
+<div class="swiper-container">
+   <!-- Additional required wrapper -->
+   <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for block in section.blocks %}
+      <div class="swiper-container" data-autoplay-delay="{{ section.settings.autoplay_delay | default: 5000 }}">
+         <div class="swiper-slide" style="background-image: url('{{ block.settings.slide_image | img_url}}');">
+
+            <div class="slide-content">
+               <h2>{{ block.settings.slide_title }}</h2>
+               <p>{{ block.settings.slide_text }}</p>
+               {% if block.settings.slide_button_url != blank %}
+               <a href="{{ block.settings.slide_button_url }}" class="slide-link">{{ block.settings.slide_button_text
+                  }}</a>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+   <!-- If we need pagination -->
+   <div class="swiper-pagination"></div>
+
+   <!-- If we need navigation buttons -->
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+      var swiperContainer = document.querySelector('.swiper-container');
+      var autoplayDelay = swiperContainer.dataset.autoplayDelay; // Access the data attribute
+
+      var mySwiper = new Swiper('.swiper-container', {
+         loop: true,
+         pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+         },
+         navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+         },
+         autoplay: {
+            delay: autoplayDelay,
+            disableOnInteraction: false,
+         },
+      });
+   });
+
+</script>
+
+
+
+{% schema %}
+{
+"name": "Dynamic Slider",
+"settings": [
+{
+"type": "text",
+"id": "autoplay_delay",
+"label": "Autoplay delay (ms)",
+"default": 5000
+}
+],
+"blocks": [
+{
+"type": "slide",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "slide_image",
+"label": "Slide image"
+},
+{
+"type": "text",
+"id": "slide_title",
+"label": "Slide title",
+"default": "Your title here"
+},
+{
+"type": "textarea",
+"id": "slide_text",
+"label": "Slide text",
+"default": "Your text here"
+},
+{
+"type": "text",
+"id": "slide_button_text",
+"label": "Button text",
+"default": "Shop Now"
+},
+{
+"type": "url",
+"id": "slide_button_url",
+"label": "Button URL"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Default Slider",
+"category": "Image"
+}
+]
+}
+{% endschema %}
