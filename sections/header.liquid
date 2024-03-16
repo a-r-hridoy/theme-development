@@ -74,7 +74,17 @@
 <nav class="navbar navbar-expand-lg main_menu">
   <div class="container container_large">
     <a class="navbar-brand" href="index.html">
-      <img src="assets/images/logo.png" alt="RESTINA" class="img-fluid w-100">
+      {% if logo != null %}
+        <img
+          src="{{ logo | img_url }}"
+          alt="{{ shop.name }}"
+          width="100"
+          height="100"
+        >
+
+      {% else %}
+        <a class="navbar-brand" href="#">{{ shop.name }}</a>
+      {%- endif -%}
     </a>
     <button
       class="navbar-toggler"
