@@ -5,16 +5,6 @@
   assign enable_search = section.settings.enable_search_box
 %}
 
-{% if template == 'index' %}
-  {% assign page_type = 'HomePage' %}
-{% elsif template == 'product' %}
-  {% assign page_type = 'Product' %}
-{% elsif template == 'collection' %}
-  {% assign page_type = 'Collection' %}
-{% elsif template == 'page' %}
-  {% assign page_type = 'Page' %}
-{% endif %}
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     {% if logo != null %}
@@ -77,82 +67,6 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       {% endif %}
-    </div>
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg main_menu">
-  <div class="container container_large">
-    <a class="navbar-brand" href="index.html">
-      {% if logo != null %}
-        <img
-          src="{{ logo | img_url }}"
-          alt="{{ shop.name }}"
-          width="100"
-          height="100"
-        >
-
-      {% else %}
-        <a class="navbar-brand" href="#">{{ shop.name }}</a>
-      {%- endif -%}
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars bar_icon"></i>
-      <i class="far fa-times close_icon"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        {% assign main_menu = linklists['main-menu'].links %}
-        {% for item in main_menu %}
-          <li class="nav-item {% if item.active %}active{% endif %}">
-            <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
-            {% if item.links.size > 0 %}
-              <ul class="droap_menu">
-                {% for subitem in item.links %}
-                  <li>
-                    <a href="{{ subitem.url }}">{{ subitem.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-
-      <ul class="menu_right">
-        <li>
-          <a class="menu_search"><i class="far fa-search"></i></a>
-        </li>
-        <li>
-          <a
-            class="menu_cart"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-            ><i class="far fa-shopping-basket"></i>
-            <span
-              class="qnty"
-              >15</span
-            ></a
-          >
-        </li>
-        <li>
-          <a class="menu_order common_btn" href="menu_03.html">
-            <span class="icon">
-              <img src="assets/images/cart_icon_1.png" alt="order" class="img-fluid w-100">
-            </span>
-            order now
-          </a>
-        </li>
-      </ul>
     </div>
   </div>
 </nav>
@@ -307,40 +221,6 @@
       </nav>
   <!-- navbar-end -->
 {% endcomment %}
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "{{ page_type }}",
-    "name": "{{ shop.name }}",
-    "url": "{{ shop.url }}",
-    "description": "{{ shop.description | escape }}",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{{ shop.url }}/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "hasMap": "{{ shop.address | map_url }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ shop.address }}",
-      "addressLocality": "{{ shop.city }}",
-      "addressRegion": "{{ shop.province }}",
-      "postalCode": "{{ shop.zip }}",
-      "addressCountry": "{{ shop.country }}"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "{{ shop.phone }}",
-      "contactType": "Customer service"
-    },
-    "sameAs": [
-      {% for social_link in shop.social_links %}
-        "{{ social_link }}"{% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    ]
-  }
-</script>
 
 {% schema %}
 {
