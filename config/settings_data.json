@@ -1,6 +1,5 @@
 {
   "current": {
-    "social_facebook_link": "",
     "sections": {
       "collection-list": {
         "type": "collection-list",
@@ -8,19 +7,16 @@
           "collection-list-0": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           },
           "collection-list-1": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           },
           "collection-list-2": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           }
         },
@@ -29,82 +25,25 @@
           "collection-list-1",
           "collection-list-2"
         ],
-        "disabled": true,
         "settings": {
-          "title": "Collection list"
         }
       },
       "featured-collection": {
         "type": "featured-collection",
         "settings": {
-          "title": "Featured collection",
           "collection": "frontpage"
         }
       },
       "featured-product": {
         "type": "featured-product",
-        "disabled": true,
         "settings": {
-          "product": "",
-          "show_share_buttons": false
-        }
-      },
-      "header": {
-        "type": "header",
-        "settings": {
-          "logo": "shopify:\/\/shop_images\/pngtree-letter-h-logo-png-png-image_6091297.png",
-          "menu": "main-menu",
-          "enable_search_box": true
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "settings": {
-          "footer_linklist": "",
-          "show_payment_icons": false
-        }
-      },
-      "slider_eGiE8a": {
-        "type": "slider",
-        "blocks": {
-          "slide_UnJbBm": {
-            "type": "slide",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/134282629.jpg",
-              "slide_title": "Slide Title",
-              "slide_caption": "Slide Caption"
-            }
-          },
-          "slide_Xpaa7F": {
-            "type": "slide",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/red-plaid-shirt_925x_80c9da70-1a16-469d-a132-750c1adafb0f.jpg",
-              "slide_title": "Slide Title",
-              "slide_caption": "Slide Caption"
-            }
-          },
-          "slide_ptewAV": {
-            "type": "slide",
-            "settings": {
-              "slide_image": "shopify:\/\/shop_images\/smiling-woman-poses_925x_af14e51c-2803-438d-895b-1bb60218b8b4.jpg",
-              "slide_title": "Slide Title",
-              "slide_caption": "Slide Caption"
-            }
-          }
-        },
-        "block_order": [
-          "slide_UnJbBm",
-          "slide_Xpaa7F",
-          "slide_ptewAV"
-        ],
-        "settings": {
-          "section_title": "Slideshow"
         }
       }
     },
     "content_for_index": [
-      "featured-product",
-      "slider_eGiE8a"
+      "collection-list",
+      "featured-collection",
+      "featured-product"
     ]
   },
   "presets": {
