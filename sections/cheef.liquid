@@ -45,7 +45,12 @@
       <div class="col-12 text-center mt_60 wow fadeInUp">
         <a class="common_btn" href="chefs.html">
           <span class="icon">
-            <img src="assets/images/eye.png" alt="order" class="img-fluid w-100">
+            <img
+              src="{{ block.settings.chef_img | img_url: 'large' }}"
+              alt="banner"
+              width="auto"
+              height="auto"
+            >
           </span>
           View All Chef
         </a>
@@ -68,6 +73,17 @@
       "id": "section_title",
       "label": "Section Title",
       "default": "Meet Our special Chefs "
+    },
+     {
+      "type": "text",
+      "id": "view_more_btn",
+      "label": "Button label",
+      "default": " View All Chef"
+    },
+    {
+        "type": "url",
+      "id": "btn_url",
+      "label": "Button link"
     }
   ],
   "blocks": [
