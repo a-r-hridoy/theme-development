@@ -1,6 +1,58 @@
+<!--
+  ==========================
+      COUNTER START
+  ===========================
+-->
+<section class="counter_area">
+  <div class="counter_bg pt_30 pb_35">
+    <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-lg-3 col-sm-6 wow fadeInUp">
+            <div class="single_counter">
+              <h2 class="counter">{{ block.settings.counter_number }}</h2>
+              <span>{{ block.settings.counter_title }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      COUNTER END
+  ===========================
+-->
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Counter",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Counter",
+      "name": "Counter_add",
+      "settings": [
+        {
+          "type": "text",
+          "id": "counter_number",
+          "label": "Counter Number",
+          "default": "10"
+        },
+        {
+          "type": "text",
+          "id": "counter_title",
+          "label": "Counter Title",
+          "default": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Counter"
+    }
+  ]
+}
 {% endschema %}
