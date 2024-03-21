@@ -1489,10 +1489,10 @@ header .header_right .nice-select:after {
 .category .section_heading h2::after {
     position: absolute;
     content: "";
-    background: url(../images/heading_shapes_1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(https://cdn.shopify.com/s/files/1/0648/4908/4594/files/heading_shapes_1.png?v=1711002347) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     top: 1px;
     left: 0;
     width: 35px;
