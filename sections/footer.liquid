@@ -34,7 +34,7 @@
                 <ul>
                   {% for link in block.settings.menu.links %}
                     <li>
-                      <a href="#">{{ link.title | escape }}</a>
+                      <a href="{{ link.url }}">{{ link.title | escape }}</a>
                     </li>
                   {% endfor %}
                 </ul>
