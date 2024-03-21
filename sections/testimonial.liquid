@@ -1,6 +1,127 @@
+<!--
+  ==========================
+      TESTIMONIAL START
+  ===========================
+-->
+<section class="testimonial mt_140 xs_mt_100" style="background: url(assets/images/testimonial_bg.jpg);">
+  <div class="testimonial_overlay pt_250 xs_pt_100">
+    <div class="container mt_20">
+      <div class="row">
+        <div class="col-md-9 wow fadeInUp">
+          <div class="testimonial_content">
+            <div class="row testi_slider">
+              {% for block in section.blocks %}
+                <div class="col-12">
+                  <div class="single_testimonial">
+                    <p class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p class="description">
+                      "I love that solvency lets us manage everything in one place. It's super helpful to be able to
+                      listen to voice samples, upload our own lists, and find quality salespeople that can grow with our
+                      team."
+                    </p>
+                    <div class="single_testimonial_footer">
+                      <div class="img">
+                        <img
+                          src="{{ block.settings.chef_img | img_url: 'large' }}"
+                          alt="testimonial_img"
+                          width="auto"
+                          height="auto"
+                        >
+                      </div>
+                      <h3>Indigo Violet <span>Co - Founder</span></h3>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="testimonial_video">
+            <a
+              class="venobox play_btn"
+              data-autoplay="true"
+              data-vbtype="video"
+              href="https://youtu.be/nqye02H_H6I?si=ougeOsfL0tat6YbT"
+            >
+              <i class="fas fa-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      TESTIMONIAL END
+  ===========================
+-->
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Meet Our special Chefs "
+    },
+     {
+          "type": "image_picker",
+          "id": "veiw_icon",
+          "label": "icon"
+        },
+     {
+      "type": "text",
+      "id": "view_more_btn",
+      "label": "Button label",
+      "default": " View All Chef"
+    },
+    {
+        "type": "url",
+      "id": "btn_url",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"Testimonial",
+      "name": "Chef Add",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "chef_img",
+          "label": "Cheef Img"
+        },
+         {
+          "type": "text",
+          "id": "chef_title",
+          "label": "Chef Title",
+           "default": "Title"
+        },
+    {
+      "type": "text",
+      "id": "chef_name",
+      "label": "Chef Name",
+      "default": "Chef Name"
+    }
+      ]
+
+    }
+  ],
+  "presets":[
+    {
+      "name": "Testimonial"
+    }
+  ]
+
+}
 {% endschema %}
