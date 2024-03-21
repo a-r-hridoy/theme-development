@@ -28,7 +28,7 @@
                     <div class="single_testimonial_footer">
                       <div class="img">
                         <img
-                          src="{{ block.settings.chef_img | img_url: 'large' }}"
+                          src="{{ block.settings.testimonial_img | img_url: 'large' }}"
                           alt="testimonial_img"
                           width="auto"
                           height="auto"
@@ -67,52 +67,30 @@
 {% schema %}
 {
   "name": "Testimonial",
-  "settings": [
-    {
-      "type": "text",
-      "id": "section_title",
-      "label": "Section Title",
-      "default": "Meet Our special Chefs "
-    },
-     {
-          "type": "image_picker",
-          "id": "veiw_icon",
-          "label": "icon"
-        },
-     {
-      "type": "text",
-      "id": "view_more_btn",
-      "label": "Button label",
-      "default": " View All Chef"
-    },
-    {
-        "type": "url",
-      "id": "btn_url",
-      "label": "Button link"
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type":"Testimonial",
-      "name": "Chef Add",
+      "name": "Testimonial_add",
       "settings":[
         {
           "type": "image_picker",
-          "id": "chef_img",
-          "label": "Cheef Img"
+          "id": "testimonial_img",
+          "label": "testimonial Img"
         },
-         {
+
+        {
           "type": "text",
-          "id": "chef_title",
-          "label": "Chef Title",
-           "default": "Title"
+          "id": "testimonial_name",
+          "label": "Testimonial Name",
+           "default": "Name"
         },
-    {
-      "type": "text",
-      "id": "chef_name",
-      "label": "Chef Name",
-      "default": "Chef Name"
-    }
+        {
+          "type": "text",
+          "id": "testimonial_title",
+          "label": "Testimonial Title",
+           "default": "Title"
+        }
       ]
 
     }
