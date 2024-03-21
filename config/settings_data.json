@@ -144,25 +144,32 @@
             "type": "our_chef",
             "settings": {
               "chef_img": "shopify:\/\/shop_images\/chef_img_1.jpg",
-              "chef_name": "Chef Namedsfa"
+              "chef_title": "Main Chef",
+              "chef_name": "Nathaneal Down"
             }
           },
           "our_chef_NqjV9c": {
             "type": "our_chef",
             "settings": {
-              "chef_name": "Chef Name"
+              "chef_img": "shopify:\/\/shop_images\/chef_img_2.jpg",
+              "chef_title": "Executive Chef",
+              "chef_name": "Pelican Steve"
             }
           },
           "our_chef_eRDg4d": {
             "type": "our_chef",
             "settings": {
-              "chef_name": "Chef Name"
+              "chef_img": "shopify:\/\/shop_images\/chef_img_3.jpg",
+              "chef_title": "Master Chef",
+              "chef_name": "Dylan Meringue"
             }
           },
           "our_chef_iHqBQ7": {
             "type": "our_chef",
             "settings": {
-              "chef_name": "Chef Name"
+              "chef_img": "shopify:\/\/shop_images\/chef_img_4.jpg",
+              "chef_title": "Executive Chef",
+              "chef_name": "Fergus Douchebag"
             }
           }
         },
