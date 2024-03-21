@@ -78,35 +78,40 @@
             "type": "slider",
             "settings": {
               "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
-              "title": "pizza"
+              "title": "pizza",
+              "btn_url": ""
             }
           },
           "slider_PnVaxG": {
             "type": "slider",
             "settings": {
               "categories_img": "shopify:\/\/shop_images\/category_img_2.jpg",
-              "title": "desert"
+              "title": "desert",
+              "btn_url": ""
             }
           },
           "slider_RU4Wt3": {
             "type": "slider",
             "settings": {
               "categories_img": "shopify:\/\/shop_images\/category_img_4.jpg",
-              "title": "drink"
+              "title": "drink",
+              "btn_url": ""
             }
           },
           "slider_yD9qTA": {
             "type": "slider",
             "settings": {
               "categories_img": "shopify:\/\/shop_images\/category_img_3.jpg",
-              "title": "burger"
+              "title": "burger",
+              "btn_url": ""
             }
           },
           "slider_AYeEU8": {
             "type": "slider",
             "settings": {
               "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
-              "title": "Title"
+              "title": "Title",
+              "btn_url": ""
             }
           }
         },
@@ -118,11 +123,7 @@
           "slider_AYeEU8"
         ],
         "settings": {
-          "Categories_title": "Popular category",
-          "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
-          "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
-          "background_image_2": "shopify:\/\/shop_images\/small_banner_img_1.jpg",
-          "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
+          "Categories_title": "Popular category"
         }
       },
       "app_download_CBCwtC": {
@@ -223,11 +224,21 @@
         "settings": {
           "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg"
         }
+      },
+      "add_banner_fzerq7": {
+        "type": "add-banner",
+        "settings": {
+          "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
+          "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
+          "background_image_2": "shopify:\/\/shop_images\/small_banner_img_1.jpg",
+          "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
+        }
       }
     },
     "content_for_index": [
       "home_EAwqgG",
       "categories_AK6wVM",
+      "add_banner_fzerq7",
       "offer_banner_xYaGxY",
       "app_download_CBCwtC",
       "cheef_M4jhig",
