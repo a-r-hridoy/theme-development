@@ -120,8 +120,11 @@
       "app_download_CBCwtC": {
         "type": "app_download",
         "settings": {
+          "app_download_img": "shopify:\/\/shop_images\/download_img.png",
           "app_download_title": "Are you Ready to Start your Order",
-          "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim."
+          "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim.",
+          "app_store_icon": "shopify:\/\/shop_images\/apple_icon_35cdbe3a-884d-4a94-9473-f66bcbd09a8e.png",
+          "play_store_icon": "shopify:\/\/shop_images\/play_store_icon_b5a6ed9f-61a7-4e6a-bf3f-a2bd7c8406b3.png"
         }
       },
       "offer_banner_xYaGxY": {
@@ -133,13 +136,53 @@
           "subtitle": "TODAY SPECIAL OFFER",
           "title": "DELICIOUS FOOD WITH US."
         }
+      },
+      "cheef_M4jhig": {
+        "type": "cheef",
+        "blocks": {
+          "our_chef_WNe6KD": {
+            "type": "our_chef",
+            "settings": {
+              "chef_img": "shopify:\/\/shop_images\/chef_img_1.jpg",
+              "chef_name": "Chef Namedsfa"
+            }
+          },
+          "our_chef_NqjV9c": {
+            "type": "our_chef",
+            "settings": {
+              "chef_name": "Chef Name"
+            }
+          },
+          "our_chef_eRDg4d": {
+            "type": "our_chef",
+            "settings": {
+              "chef_name": "Chef Name"
+            }
+          },
+          "our_chef_iHqBQ7": {
+            "type": "our_chef",
+            "settings": {
+              "chef_name": "Chef Name"
+            }
+          }
+        },
+        "block_order": [
+          "our_chef_WNe6KD",
+          "our_chef_NqjV9c",
+          "our_chef_eRDg4d",
+          "our_chef_iHqBQ7"
+        ],
+        "settings": {
+          "section_title": "Meet Our special Chefs"
+        }
       }
     },
     "content_for_index": [
       "home_EAwqgG",
       "categories_AK6wVM",
       "offer_banner_xYaGxY",
-      "app_download_CBCwtC"
+      "app_download_CBCwtC",
+      "cheef_M4jhig"
     ]
   },
   "presets": {
