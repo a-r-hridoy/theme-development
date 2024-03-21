@@ -60,7 +60,12 @@
           <ul>
             <li>
               <div class="img">
-                <img src="assets/images/footer_post_img_1.jpg" alt="post" class="img-fluid w-100">
+                <img
+                  src="{{ section.settings.footer_post_1 | img_url: 'large' }}"
+                  alt="footer_logo"
+                  width="auto"
+                  height="auto"
+                >
               </div>
               <div class="text">
                 <p><i class="far fa-clock"></i> March 24, 2024</p>
@@ -69,7 +74,12 @@
             </li>
             <li>
               <div class="img">
-                <img src="assets/images/footer_post_img_2.jpg" alt="post" class="img-fluid w-100">
+                <img
+                  src="{{ section.settings.footer_post_2 | img_url: 'large' }}"
+                  alt="footer_logo"
+                  width="auto"
+                  height="auto"
+                >
               </div>
               <div class="text">
                 <p><i class="far fa-clock"></i> March 24, 2024</p>
