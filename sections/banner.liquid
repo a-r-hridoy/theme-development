@@ -1,0 +1,87 @@
+<section class="banner" style="background-image: url('{{ section.settings.background_image | img_url: 'large' }}');">
+  <div class="container container_large">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-xxl-6 col-lg-6 col-xl-6 col-md-9">
+        <div class="banner_text wow fadeInUp">
+          <h5>{{ section.settings.title }}</h5>
+          <h1>{{ section.settings.intro_text }}</h1>
+          <p>{{ section.settings.rte }}</p>
+          <form>
+            <input type="text" placeholder="Enter Your Location">
+            <div class="banner_btn_area d-flex flex-wrap align-items-center">
+              <button class="common_btn" type="submit">{{ section.settings.pickup_button_text }}</button>
+              <span>or</span>
+              <button class="common_btn" type="submit">{{ section.settings.delivery_button_text }}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-xxl-5 col-lg-6 col-xl-6">
+        <div class="banner_img wow fadeInRight">
+          <div class="img">
+            <img
+              src="{{ section.settings.banner_image | img_url: 'large' }}"
+              alt="banner"
+              width="auto"
+              height="auto"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Welcome to Our Store"
+    },
+
+    {
+      "type": "text",
+      "id": "intro_text",
+      "label": "Introductory Text",
+      "default": "This is some introductory text about our store."
+    }, {
+
+  "type": "richtext",
+  "id": "rte",
+  "label": "Details",
+  "default": "<p>Commodo ullamcorper a lacus vestibulum sed arcu non. Non blandit massa enim Sem viverra aliquet eget sit amet tellus cras</p>"
+},
+
+    {
+      "type": "text",
+      "id": "pickup_button_text",
+      "label": "Button label",
+      "default": "Picup"
+    }, {
+      "type": "text",
+      "id": "delivery_button_text",
+      "label": "Button label",
+      "default": "Delivery"
+    }
+  ],
+  "presets": [
+    {
+      "name": "banner"
+    }
+  ]
+}
+{% endschema %}
