@@ -63,18 +63,10 @@
               "title": "Menu title",
               "footer_menu": ""
             }
-          },
-          "footer_menu_JEtmNE": {
-            "type": "footer_menu",
-            "settings": {
-              "title": "Menu title",
-              "footer_menu": "main-menu"
-            }
           }
         },
         "block_order": [
-          "footer_menu_Rqjz4R",
-          "footer_menu_JEtmNE"
+          "footer_menu_Rqjz4R"
         ],
         "settings": {
         }
