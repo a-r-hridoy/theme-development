@@ -25,30 +25,24 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-2 col-sm-6 col-md-4">
-        <div class="footer_link">
-          <h3>Our Menu</h3>
-          <ul>
-            <li><a href="#">Breakfast</a></li>
-            <li><a href="#">Lunch</a></li>
-            <li><a href="#">Dinner</a></li>
-            <li><a href="#">Vegetable</a></li>
-            <li><a href="#">Korean Food</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-md-4">
-        <div class="footer_link">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-      </div>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'footer_menu' %}
+            <div class="col-lg-2 col-sm-6 col-md-4">
+              <div class="footer_link">
+                <h3>{{ block.settings.title }}</h3>
+                <ul>
+                  {% for link in block.settings.menu.links %}
+                    <li>
+                      <a href="#">{{ link.title | escape }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+
       <div class="col-lg-4 col-md-9">
         <div class=" footer_post">
           <h3>Recent Post</h3>
