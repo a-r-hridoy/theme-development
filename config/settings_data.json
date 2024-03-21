@@ -222,7 +222,8 @@
           "testimonial_Recahz"
         ],
         "settings": {
-          "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg"
+          "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg",
+          "video_url": "shopify:\/\/files\/videos\/Fashion - Google Chrome 2023-11-04 12-09-30.mp4"
         }
       },
       "add_banner_fzerq7": {
