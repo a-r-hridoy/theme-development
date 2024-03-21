@@ -57,6 +57,9 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "footer_logo": "shopify:\/\/shop_images\/footer_logo.png",
+          "footer_post_1": "shopify:\/\/shop_images\/footer_post_img_1.jpg",
+          "footer_post_2": "shopify:\/\/shop_images\/footer_post_img_2.jpg"
         }
       },
       "home_EAwqgG": {
