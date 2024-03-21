@@ -2141,10 +2141,10 @@ header .header_right .nice-select:after {
 .add_banner_full_text .img::after {
     position: absolute;
     content: "";
-    background: url(../images/add_banner_full_img_shapes.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(https://cdn.shopify.com/s/files/1/0648/4908/4594/files/add_banner_full_img_shapes.png?v=1711002323) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     width: 170px;
     height: 175px;
     top: -20px;
