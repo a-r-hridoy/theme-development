@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-xl-8 m-auto wow fadeInUp">
         <div class="section_heading mb_25">
-          <h2>Meet Our special Chefs</h2>
+          <h2>{{ section.settings.section_title }}</h2>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
               <h3>{{ block.settings.title }}</h3>
             </a>
             <div class="single_chef_text">
-              <a class="title" href="chefs_details.html">Nathaneal Down</a>
+              <a class="title" href="chefs_details.html">{{ section.settings.cheef_name }}</a>
               <ul>
                 <li>
                   <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -63,9 +63,9 @@
     },
     {
       "type": "text",
-      "id": "ct_banner_title_2",
-      "label": "CT Banner Title 2",
-      "default": "GREAT VALUE MIXED DRINKS"
+      "id": "cheef_name",
+      "label": "Cheef Name",
+      "default": "Cheef Name"
     }
   ],
   "blocks": [
