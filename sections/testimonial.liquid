@@ -50,7 +50,7 @@
               class="venobox play_btn"
               data-autoplay="true"
               data-vbtype="video"
-              href="https://youtu.be/nqye02H_H6I?si=ougeOsfL0tat6YbT"
+              href="{{ section.settings.video_url }}"
             >
               <i class="fas fa-play"></i>
             </a>
@@ -74,6 +74,11 @@
       "type": "image_picker",
       "id": "background_image",
       "label": "Background Image"
+    },
+    {
+     "type": "video",
+      "id": "video_url",
+      "label": "Video link"
     }
   ],
   "blocks": [
