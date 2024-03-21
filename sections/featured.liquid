@@ -1,6 +1,103 @@
+<section class="featur-section section-1">
+  <div class="container">
+    <div class="row">
+      {% for feature in section.settings.features %}
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="feature-img">
+              <img
+                src="{{ feature.image | img_url: 'large' }}"
+                alt="{{ feature.title }} Image"
+                width="auto"
+                height="auto"
+              >
+            </div>
+            <div class="feature-content">
+              <h4>{{ feature.title }}</h4>
+              <p>{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Feature Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Features"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "Feature 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Feature 1 Title",
+      "default": "Feature 1 Title"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_description",
+      "label": "Feature 1 Description",
+      "default": "Feature 1 description text."
+    }, {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Feature 2 Image"
+    }, {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Feature 2 Title",
+      "default": "Feature 2 Title"
+    }, {
+      "type": "textarea",
+      "id": "feature_2_description",
+      "label": "Feature 2 Description",
+      "default": "Feature 2 description text."
+    }, {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Feature 3 Image"
+    }, {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Feature 3 Title",
+      "default": "Feature 3 Title"
+    }, {
+      "type": "textarea",
+      "id": "feature_3_description",
+      "label": "Feature 3 Description",
+      "default": "Feature 3 description text."
+    }, {
+      "type": "image_picker",
+      "id": "feature_4_image",
+      "label": "Feature 4 Image"
+    }, {
+      "type": "text",
+      "id": "feature_4_title",
+      "label": "Feature 4 Title",
+      "default": "Feature 4 Title"
+    }, {
+      "type": "textarea",
+      "id": "feature_4_description",
+      "label": "Feature 4 Description",
+      "default": "Feature 4 description text."
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Feature Section"
+    }
+  ]
+}
 {% endschema %}
