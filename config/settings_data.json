@@ -111,7 +111,9 @@
         ],
         "settings": {
           "Categories_title": "Popular category",
+          "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
           "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
+          "background_image_2": "shopify:\/\/shop_images\/small_banner_img_1.jpg",
           "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
         }
       }
