@@ -101,13 +101,21 @@
               "categories_img": "shopify:\/\/shop_images\/category_img_3.jpg",
               "title": "burger"
             }
+          },
+          "slider_AYeEU8": {
+            "type": "slider",
+            "settings": {
+              "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
+              "title": "Title"
+            }
           }
         },
         "block_order": [
           "slider_ynfTJ3",
           "slider_PnVaxG",
           "slider_RU4Wt3",
-          "slider_yD9qTA"
+          "slider_yD9qTA",
+          "slider_AYeEU8"
         ],
         "settings": {
           "Categories_title": "Popular category",
