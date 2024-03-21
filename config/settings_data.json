@@ -56,18 +56,6 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "footer_menu_Rqjz4R": {
-            "type": "footer_menu",
-            "settings": {
-              "title": "Menu title",
-              "footer_menu": ""
-            }
-          }
-        },
-        "block_order": [
-          "footer_menu_Rqjz4R"
-        ],
         "settings": {
         }
       },
