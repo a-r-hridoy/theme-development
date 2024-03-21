@@ -70,10 +70,55 @@
           "pickup_button_text": "Picup",
           "delivery_button_text": "Delivery"
         }
+      },
+      "categories_AK6wVM": {
+        "type": "categories",
+        "blocks": {
+          "slider_ynfTJ3": {
+            "type": "slider",
+            "settings": {
+              "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
+              "title": "pizza"
+            }
+          },
+          "slider_PnVaxG": {
+            "type": "slider",
+            "settings": {
+              "categories_img": "shopify:\/\/shop_images\/category_img_2.jpg",
+              "title": "desert"
+            }
+          },
+          "slider_RU4Wt3": {
+            "type": "slider",
+            "settings": {
+              "categories_img": "shopify:\/\/shop_images\/category_img_4.jpg",
+              "title": "drink"
+            }
+          },
+          "slider_yD9qTA": {
+            "type": "slider",
+            "settings": {
+              "categories_img": "shopify:\/\/shop_images\/category_img_3.jpg",
+              "title": "burger"
+            }
+          }
+        },
+        "block_order": [
+          "slider_ynfTJ3",
+          "slider_PnVaxG",
+          "slider_RU4Wt3",
+          "slider_yD9qTA"
+        ],
+        "settings": {
+          "Categories_title": "Popular category",
+          "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
+          "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
+        }
       }
     },
     "content_for_index": [
-      "home_EAwqgG"
+      "home_EAwqgG",
+      "categories_AK6wVM"
     ]
   },
   "presets": {
