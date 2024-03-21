@@ -120,11 +120,8 @@
       "app_download_CBCwtC": {
         "type": "app_download",
         "settings": {
-          "app_download_img": "shopify:\/\/shop_images\/download_img.png",
           "app_download_title": "Are you Ready to Start your Order",
-          "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim.",
-          "app_store_icon": "shopify:\/\/shop_images\/apple_icon_35cdbe3a-884d-4a94-9473-f66bcbd09a8e.png",
-          "play_store_icon": "shopify:\/\/shop_images\/play_store_icon_b5a6ed9f-61a7-4e6a-bf3f-a2bd7c8406b3.png"
+          "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim."
         }
       },
       "offer_banner_xYaGxY": {
@@ -136,57 +133,13 @@
           "subtitle": "TODAY SPECIAL OFFER",
           "title": "DELICIOUS FOOD WITH US."
         }
-      },
-      "cheef_EieFgN": {
-        "type": "cheef",
-        "blocks": {
-          "our_cheef_Ug4Qhx": {
-            "type": "our_cheef",
-            "settings": {
-              "cheef_img": "shopify:\/\/shop_images\/chef_img_1.jpg",
-              "title": "Main Chef"
-            }
-          },
-          "our_cheef_JiCWHK": {
-            "type": "our_cheef",
-            "settings": {
-              "cheef_img": "shopify:\/\/shop_images\/chef_img_2.jpg",
-              "title": "Executive Chef"
-            }
-          },
-          "our_cheef_iDp9p7": {
-            "type": "our_cheef",
-            "settings": {
-              "cheef_img": "shopify:\/\/shop_images\/chef_img_3.jpg",
-              "title": "Master Chef"
-            }
-          },
-          "our_cheef_pm94XX": {
-            "type": "our_cheef",
-            "settings": {
-              "cheef_img": "shopify:\/\/shop_images\/chef_img_4.jpg",
-              "title": "Fergus Douchebag"
-            }
-          }
-        },
-        "block_order": [
-          "our_cheef_Ug4Qhx",
-          "our_cheef_JiCWHK",
-          "our_cheef_iDp9p7",
-          "our_cheef_pm94XX"
-        ],
-        "settings": {
-          "section_title": "Meet Our special Chefs",
-          "cheef_name": "Cheef Name"
-        }
       }
     },
     "content_for_index": [
       "home_EAwqgG",
       "categories_AK6wVM",
       "offer_banner_xYaGxY",
-      "app_download_CBCwtC",
-      "cheef_EieFgN"
+      "app_download_CBCwtC"
     ]
   },
   "presets": {
