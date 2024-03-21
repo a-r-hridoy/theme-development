@@ -9,7 +9,12 @@
       <div class="col-lg-3 col-md-4">
         <div class="footer_info">
           <a class="footer_logo" href="index.html">
-            <img src="assets/images/footer_logo.png" alt="RESTINA" class="img-fluid w-100">
+            <img
+              src="{{ section.settings.footer_logo | img_url: 'large' }}"
+              alt="footer_logo"
+              width="auto"
+              height="auto"
+            >
           </a>
           <p>Cras incident lobotids feudist makes viramas sagittas eu valuta.</p>
           <ul>
@@ -100,3 +105,33 @@
       FOOTER END
   ===========================
 -->
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer logo"
+    },
+     {
+      "type": "image_picker",
+      "id": "footer_post_1",
+      "label": "Footer Post 1"
+    },
+     {
+      "type": "image_picker",
+      "id": "footer_post_2",
+      "label": "Footer Post 2"
+    }
+  ],
+
+  "presets":[
+    {
+      "name": "Footer"
+    }
+  ]
+
+}
+{% endschema %}
