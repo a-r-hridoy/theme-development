@@ -1,23 +1,87 @@
 {% liquid
   assign logo = section.settings.logo
-  assign user_img = section.settings.user_img
+  assign cartIconImg = section.settings.cartIconImg
+  assign user_icon = section.settings.user_icon
   assign menu = section.settings.menu
   assign enable_search = section.settings.enable_search_box
 %}
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    {% if logo != null %}
+<!--
+  ==========================
+  HEADER START
+  ===========================
+-->
+<header>
+  <div class="container container_large">
+    <div class="row">
+      <div class="col-xl-6 col-md-6 d-none d-md-block">
+        <div class="header_left">
+          <p>
+            <i class="far fa-truck"></i>
+            Free Express shipping over $200!
+          </p>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <div class="header_right">
+          <ul>
+            <li>
+              <select class="select_js">
+                <option value="">English</option>
+                <option value="">Japanes</option>
+                <option value="">Korean</option>
+                <option value="">Urdu</option>
+                <option value="">Chines</option>
+                <option value="">Arabic</option>
+              </select>
+            </li>
+            <li>
+              <select class="select_js">
+                <option value="">$ USD</option>
+                <option value="">ট BDT</option>
+                <option value="">€ EUR</option>
+                <option value="">£ GBP</option>
+                <option value="">¥ JPY</option>
+              </select>
+            </li>
+            <li>
+              <a href="dashboard.html">
+                <span>
+                  <img
+                    src="{{ user_icon | img_url }}"
+                    alt="{{ null }}"
+                    width="50"
+                    height="50"
+                ></span>
+                My Account
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--
+  ==========================
+  HEADER END
+  ===========================
+-->
+<!--
+  ==========================
+  MENU START
+  ===========================
+-->
+<nav class="navbar navbar-expand-lg main_menu">
+  <div class="container container_large">
+    <a class="navbar-brand" href="index.html">
       <img
         src="{{ logo | img_url }}"
         alt="{{ shop.name }}"
         width="100"
         height="100"
       >
-
-    {% else %}
-      <a class="navbar-brand" href="#">{{ shop.name }}</a>
-    {%- endif -%}
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -27,204 +91,233 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <i class="fas fa-bars bar_icon"></i>
+      <i class="far fa-times close_icon"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-        {% for link in menu.links %}
-          <li class="nav-item {% if link.links.size > 0 %} dropdown {% endif %}">
-            <a
-              class="nav-link {% if link.links.size > 0 %}dropdown-toggle dropdown-toggle_{{ forloop.index }}{% endif %}"
-              href="{{ link.url }}"
-              {% if link.links.size > 0 %}
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              {% endif %}
-            >
-              {{ link.title }}
-            </a>
-            {% if link.links.size > 0 %}
-              <ul class="dropdown-menu">
-                {% for dropLink in link.links %}
-                  <li>
-                    <a class="dropdown-item" href="{{dropLink.url}}">{{ dropLink.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"
+            >Home
+            <i class="fal fa-plus"></i>
+          </a>
+          <ul class="droap_menu">
+            <li>
+              <a class="active" href="index.html">home 01 (Restaurent)</a>
+            </li>
+            <li>
+              <a href="index_2.html">home 02 (CP)</a>
+            </li>
+            <li>
+              <a href="index_3.html">home 03 (Restaurent)</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            >About
+            <i class="fal fa-plus"></i>
+          </a>
+          <ul class="droap_menu">
+            <li>
+              <a href="about_us_01.html">about style 01</a>
+            </li>
+            <li>
+              <a href="about_us_02.html">about style 02</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            >Menu
+            <i class="fal fa-plus"></i>
+          </a>
+          <ul class="droap_menu">
+            <li>
+              <a href="menu_01.html">menu style 01</a>
+            </li>
+            <li>
+              <a href="menu_02.html">menu style 02</a>
+            </li>
+            <li>
+              <a href="menu_03.html">menu list view</a>
+            </li>
+            <li>
+              <a href="menu_details.html">menu details</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            >Pages
+            <i class="fal fa-plus"></i>
+          </a>
+          <ul class="droap_menu">
+            <li>
+              <a href="blogs.html">blogs</a>
+            </li>
+            <li>
+              <a href="blog_details.html">blog details</a>
+            </li>
+            <li>
+              <a href="chefs.html">chefs</a>
+            </li>
+            <li>
+              <a href="chefs_details.html">chef details</a>
+            </li>
+            <li>
+              <a href="cart_view.html">cart view</a>
+            </li>
+            <li>
+              <a href="checkout.html">checkout</a>
+            </li>
+            <li>
+              <a href="dashboard.html">dashboard</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ's</a>
+            </li>
+            <li>
+              <a href="payment.html">payment</a>
+            </li>
+            <li>
+              <a href="reservation.html">reservation</a>
+            </li>
+            <li>
+              <a href="service.html">service</a>
+            </li>
+            <li>
+              <a href="service_details.html">service details</a>
+            </li>
+            <li>
+              <a href="sign_in.html">sign in</a>
+            </li>
+            <li>
+              <a href="sign_up.html">sign up</a>
+            </li>
+            <li>
+              <a href="forgot_password.html">forgot password</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">privacy policy</a>
+            </li>
+            <li>
+              <a href="terms_condition.html">terms & condition</a>
+            </li>
+            <li>
+              <a href="error.html">error/404</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="branch.html">Branch</a>
+        </li>
       </ul>
-      {% if enable_search %}
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+      <ul class="menu_right">
+        <li>
+          <a class="menu_search">
+            <i class="far fa-search"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="menu_cart"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
           >
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      {% endif %}
+            <i class="far fa-shopping-basket"></i>
+            <span class="qnty">15</span>
+          </a>
+        </li>
+        <li>
+          <a class="menu_order common_btn" href="menu_03.html">
+            <span class="icon">
+              <img
+                src="{{ cartIconImg | img_url }}"
+                alt="{{ shop.name }}"
+                width="50"
+                height="50"
+              >
+            </span>
+            order now
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
 
 {% comment %}
-  <!-- navbar-start -->
-      <nav class="navbar navbar-expand-xl">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img
-              src="{{ logo | img_url }}"
-              alt="{{ shop.name }}"
-              width="100"
-              height="100"></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              {% for in menu.links %}
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="{{ link.url }}">{{ link.title }}</a>
-                </li>
-              {% endfor %}
-              <li class="nav-item">
-                <div class="page-drop">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="#">page
-                    <i class="fa-solid fa-angle-down"></i>
-                    <i class="fa-solid fa-angle-up"></i>
-                  </a>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                          {% if logo != null %}
+                            <img
+                              src="{{ logo | img_url }}"
+                              alt="{{ shop.name }}"
+                              width="100"
+                              height="100">
 
-                  <div class="page-item shadow-sm mb-5 bg-body rounded">
-                    <ul class="">
-                      <li>
-                        <a href="product.html" href="product.html">
-                          <span>All products</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="product-grid.html" href="product-grid.html">
-                          <span>product grid view</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="product-list.html" href="product-list.html">
-                          <span>product list view</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="product-details.html" href="product-details.html">
-                          <span>product details</span>
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="sign-up.html">
-                          <span>sign-up</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="page-drop">
-                  <a
-                    class="nav-link"
-                    aria-current="blog"
-                    href="#">blog
-                    <i class="fa-solid fa-angle-down"></i>
-                    <i class="fa-solid fa-angle-up"></i>
-                  </a>
-
-                  <div class="page-item shadow-sm mb-5 bg-body rounded">
-                    <ul class="">
-                      <li>
-                        <a href="blog.html">
-                          <span>blog</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-details-1.html">
-                          <span>blog-details-1</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-details-2.html">
-                          <span>blog-details-2</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="nav-right">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control"
-                type="search"
-                placeholder="Search here"
-                aria-label="Search" />
-              <button class=" " type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-
-            <div class="nav-icon d-flex align-items-center">
-              <div class="account">
-                <img
-                  src="{{ user_img | img_url }}"
-                  alt="user_name"
-                  width="50"
-                  height="50">
-                <div class="account-drop">
-                  <ul>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <a>
-                    <i
-                      class="fa-sharp fa-light fa-cart-shopping"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasExample"
-                      aria-controls="offcanvasExample"></i>
-                  </a>
-                  <span>1</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-  <!-- navbar-end -->
+                          {% else %}
+                            <a class="navbar-brand" href="#">{{ shop.name }}</a>
+                          {%- endif -%}
+                          <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              {% for link in menu.links %}
+                                <li class="nav-item {% if link.links.size > 0 %} dropdown {% endif %}">
+                                  <a
+                                    class="nav-link {% if link.links.size > 0 %}dropdown-toggle dropdown-toggle_{{ forloop.index }}{% endif %}"
+                                    href="{{ link.url }}"
+                                    {% if link.links.size > 0 %}
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    {% endif %}>
+                                    {{ link.title }}
+                                  </a>
+                                  {% if link.links.size > 0 %}
+                                    <ul class="dropdown-menu">
+                                      {% for dropLink in link.links %}
+                                        <li>
+                                          <a class="dropdown-item" href="{{dropLink.url}}">{{ dropLink.title }}</a>
+                                        </li>
+                                      {% endfor %}
+                                    </ul>
+                                  {% endif %}
+                                </li>
+                              {% endfor %}
+                            </ul>
+                            {% if enable_search %}
+                              <form class="d-flex" role="search">
+                                <input
+                                  class="form-control me-2"
+                                  type="search"
+                                  placeholder="Search"
+                                  aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                              </form>
+                            {% endif %}
+                          </div>
+                        </div>
+  </nav>
 {% endcomment %}
 
 {% schema %}
 {
-  "name": "Header",
+  "name": "Header-cTake",
   "settings": [
     {
       "type": "image_picker",
@@ -234,16 +327,21 @@
     },
     {
       "type": "image_picker",
-      "id": "user_img",
-      "label": "Select user_img",
+      "id": "cartIconImg",
+      "label": "Select cart img",
+      "info": "Recommnended siz: 50x50px"
+    },
+    {
+      "type": "image_picker",
+      "id": "user_icon",
+      "label": "Select user_icon",
       "info": "Recommnended siz: 50x50px"
     },
     {
       "type": "link_list",
       "id": "menu",
       "label": "Select Menu"
-    },
-    {
+    }, {
       "type": "header",
       "content": "Search bar"
     }, {
@@ -251,6 +349,12 @@
       "id": "enable_search_box",
       "label": "Enable_search_box",
       "default": true
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Header-cTake"
     }
   ]
 }
