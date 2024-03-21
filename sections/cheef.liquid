@@ -1,6 +1,114 @@
+<!--
+  ==========================
+      CHEFS START
+  ===========================
+-->
+<section class="shefs pt_125 xs_pt_90">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 m-auto wow fadeInUp">
+        <div class="section_heading mb_25">
+          <h2>Meet Our special Chefs</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for block in section.blocks %}
+        <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp">
+          <div class="single_chef">
+            <a href="chefs_details.html" class="single_chef_img">
+              <img
+                src="{{ block.settings.cheef_img | img_url: 'large' }}"
+                alt="banner"
+                width="auto"
+                height="auto"
+              >
+              <h3>{{ block.settings.title }}</h3>
+            </a>
+            <div class="single_chef_text">
+              <a class="title" href="chefs_details.html">Nathaneal Down</a>
+              <ul>
+                <li>
+                  <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      CHEFS END
+  ===========================
+-->
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Our Ceef",
+  "settings": [
+    {
+      "type": "text",
+      "id": "Categories_title",
+      "label": "Title",
+      "default": "Popular category"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_1",
+      "label": "Background Image 1"
+    },
+     {
+      "type": "text",
+      "id": "ct_banner_title_1",
+      "label": "CT Banner Title 1",
+      "default": "THE BEST BURGER PLACE IN TOWN"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_2",
+      "label": "Background Image 2"
+    },
+    {
+      "type": "text",
+      "id": "ct_banner_title_2",
+      "label": "CT Banner Title 2",
+      "default": "GREAT VALUE MIXED DRINKS"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"our_cheef",
+      "name": "Cheef Add",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "cheef_img",
+          "label": "Cheef Img"
+        },
+         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+           "default": "Title"
+        }
+      ]
+
+    }
+  ],
+  "presets":[
+    {
+      "name": "Our Cheef"
+    }
+  ]
+
+}
 {% endschema %}
