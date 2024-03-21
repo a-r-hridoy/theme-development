@@ -201,9 +201,10 @@
           "testimonial_Recahz": {
             "type": "Testimonial",
             "settings": {
-              "testimonial_name": "Name",
-              "testimonial_title": "Title",
-              "testimonial_description": ""
+              "testimonial_img": "shopify:\/\/shop_images\/client_img_2.png",
+              "testimonial_name": "jihan ahmed",
+              "testimonial_title": "Co - Founder",
+              "testimonial_description": "\"I love that solvency lets us manage everything in one place. It's super helpful to be able to listen to voice samples, upload our own lists, and find quality salespeople that can grow with our team.\""
             }
           }
         },
