@@ -1460,7 +1460,7 @@ header .header_right .nice-select:after {
 .banner_img .img::after {
     position: absolute;
     content: "";
-    background: url(../images/banner_shapes.png);
+    background: url(file:///D:/shopify/resturant/index.html?#);
     background-position: center;
     background-repeat: no-repeat;
     width: 350px;
