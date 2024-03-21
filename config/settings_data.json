@@ -47,6 +47,9 @@
       "header": {
         "type": "header",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_7e53380f-b500-463f-8c7a-7addfeca3adb.png",
+          "cartIconImg": "shopify:\/\/shop_images\/cart_icon_1.png",
+          "user_icon": "shopify:\/\/shop_images\/user_icon_ae7b2e80-3a68-428a-a431-2d92dada14f5.png",
           "menu": "",
           "enable_search_box": true
         }
@@ -56,14 +59,21 @@
         "settings": {
         }
       },
-      "gp_global_section_505206443650057095_L9QGqk": {
-        "type": "gp-global-section-505206443650057095",
+      "home_EAwqgG": {
+        "type": "Home",
         "settings": {
+          "banner_image": "shopify:\/\/shop_images\/banner_img_296188b4-9b4d-457d-ba69-a0f0a7968236.png",
+          "background_image": "shopify:\/\/shop_images\/banner_bg.jpg",
+          "title": "Welcome to Our Store",
+          "intro_text": "This is some introductory text about our store.",
+          "rte": "<p>Commodo ullamcorper a lacus vestibulum sed arcu non. Non blandit massa enim Sem viverra aliquet eget sit amet tellus cras<\/p>",
+          "pickup_button_text": "Picup",
+          "delivery_button_text": "Delivery"
         }
       }
     },
     "content_for_index": [
-      "gp_global_section_505206443650057095_L9QGqk"
+      "home_EAwqgG"
     ]
   },
   "presets": {
