@@ -180,7 +180,10 @@
           "our_chef_iHqBQ7"
         ],
         "settings": {
-          "section_title": "Meet Our special Chefs"
+          "section_title": "Meet Our special Chefs",
+          "veiw_icon": "shopify:\/\/shop_images\/eye.png",
+          "view_more_btn": "View All Chef",
+          "btn_url": ""
         }
       }
     },
