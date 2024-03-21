@@ -1,6 +1,138 @@
+<!--
+  ==========================
+      CATEGORY START
+  ===========================
+-->
+<section class="category pt_130 xs_pt_90">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 wow fadeInUp">
+        <div class="section_heading heading_left mb_50">
+          <h2>{{ section.settings.Categories_title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row category_slider">
+      {% for block in section.blocks %}
+        <div class="col-xl-3 wow fadeInUp">
+          <a href="menu_03.html" class="category_item">
+            <img
+              src="{{ block.settings.categories_img | img_url: 'large' }}"
+              alt="banner"
+              width="auto"
+              height="auto"
+            >
+            <h3>{{ block.settings.title }}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      CATEGORY END
+  ===========================
+-->
+
+<!--
+  ==========================
+      ADD BANNER START
+  ===========================
+-->
+<section class="add_banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-7 wow fadeInUp">
+        <div
+          class="add_banner_large"
+          style="background-image: url('{{ section.settings.background_image_1 | img_url: 'large' }}');"
+        >
+          <div class="text">
+            <h3>{{ section.settings.ct_banner_title_1 }}</h3>
+            <a href="menu_details.html"> order now <i class="fas fa-chevron-circle-right"></i> </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-5 wow fadeInUp">
+        <div
+          class="add_banner_small"
+          style="background-image: url('{{ section.settings.background_image_2 | img_url: 'large' }}');"
+        >
+          <div class="text">
+            <h3>{{ section.settings.ct_banner_title_2 }}</h3>
+            <a href="menu_details.html"> order now <i class="fas fa-chevron-circle-right"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      ADD BANNER END
+  ===========================
+-->
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Categories",
+  "settings": [
+    {
+      "type": "text",
+      "id": "Categories_title",
+      "label": "Title",
+      "default": "Popular category"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_1",
+      "label": "Background Image 1"
+    },
+     {
+      "type": "text",
+      "id": "ct_banner_title_1",
+      "label": "CT Banner Title 1",
+      "default": "THE BEST BURGER PLACE IN TOWN"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_2",
+      "label": "Background Image 2"
+    },
+    {
+      "type": "text",
+      "id": "ct_banner_title_2",
+      "label": "CT Banner Title 2",
+      "default": "GREAT VALUE MIXED DRINKS"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"slider",
+      "name": "Slide",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "categories_img",
+          "label": "Categories_img"
+        },
+         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+           "default": "Title"
+        }
+      ]
+
+    }
+  ],
+  "presets":[
+    {
+      "name": "Categories",
+      "category":"Categories"
+    }
+  ]
+
+}
 {% endschema %}
