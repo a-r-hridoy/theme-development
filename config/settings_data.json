@@ -185,6 +185,11 @@
           "view_more_btn": "View All Chef",
           "btn_url": ""
         }
+      },
+      "testimonial_cjbYm4": {
+        "type": "testimonial",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -192,7 +197,8 @@
       "categories_AK6wVM",
       "offer_banner_xYaGxY",
       "app_download_CBCwtC",
-      "cheef_M4jhig"
+      "cheef_M4jhig",
+      "testimonial_cjbYm4"
     ]
   },
   "presets": {
