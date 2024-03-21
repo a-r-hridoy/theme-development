@@ -18,7 +18,7 @@
           <div class="single_chef">
             <a href="chefs_details.html" class="single_chef_img">
               <img
-                src="{{ block.settings.cheef_img | img_url: 'large' }}"
+                src="{{ block.settings.chef_img | img_url: 'large' }}"
                 alt="banner"
                 width="auto"
                 height="auto"
@@ -26,7 +26,7 @@
               <h3>{{ block.settings.title }}</h3>
             </a>
             <div class="single_chef_text">
-              <a class="title" href="chefs_details.html">{{ section.settings.cheef_name }}</a>
+              <a class="title" href="chefs_details.html">{{ section.settings.chef_name }}</a>
               <ul>
                 <li>
                   <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -53,7 +53,7 @@
 
 {% schema %}
 {
-  "name": "Our Ceef",
+  "name": "Our Cef",
   "settings": [
     {
       "type": "text",
@@ -64,25 +64,25 @@
   ],
   "blocks": [
     {
-      "type":"our_cheef",
-      "name": "Cheef Add",
+      "type":"our_chef",
+      "name": "Chef Add",
       "settings":[
         {
           "type": "image_picker",
-          "id": "cheef_img",
+          "id": "chef_img",
           "label": "Cheef Img"
         },
          {
           "type": "text",
           "id": "title",
-          "label": "Title",
+          "label": "Chef Title",
            "default": "Title"
         },
     {
       "type": "text",
-      "id": "cheef_name",
-      "label": "Cheef Name",
-      "default": "Cheef Name"
+      "id": "chef_name",
+      "label": "Chef Name",
+      "default": "Chef Name"
     }
       ]
 
@@ -90,7 +90,7 @@
   ],
   "presets":[
     {
-      "name": "Our Cheef"
+      "name": "Our Chef"
     }
   ]
 
