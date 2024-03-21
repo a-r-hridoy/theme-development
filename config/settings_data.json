@@ -197,10 +197,19 @@
               "testimonial_title": "Co - Founder",
               "testimonial_description": "\"I love that solvency lets us manage everything in one place. It's super helpful to be able to listen to voice samples, upload our  own lists, and find quality salespeople that can grow with our team.\""
             }
+          },
+          "testimonial_Recahz": {
+            "type": "Testimonial",
+            "settings": {
+              "testimonial_name": "Name",
+              "testimonial_title": "Title",
+              "testimonial_description": ""
+            }
           }
         },
         "block_order": [
-          "testimonial_7qbqqx"
+          "testimonial_7qbqqx",
+          "testimonial_Recahz"
         ],
         "settings": {
           "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg"
