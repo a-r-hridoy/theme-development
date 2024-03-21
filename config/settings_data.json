@@ -234,6 +234,47 @@
           "background_image_2": "shopify:\/\/shop_images\/small_banner_img_1.jpg",
           "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
         }
+      },
+      "counter_63H7dJ": {
+        "type": "counter",
+        "blocks": {
+          "counter_b8dYRe": {
+            "type": "Counter",
+            "settings": {
+              "counter_number": "45",
+              "counter_title": "deshes"
+            }
+          },
+          "counter_cFRtrY": {
+            "type": "Counter",
+            "settings": {
+              "counter_number": "68",
+              "counter_title": "locations"
+            }
+          },
+          "counter_iE7U3x": {
+            "type": "Counter",
+            "settings": {
+              "counter_number": "32",
+              "counter_title": "chefs"
+            }
+          },
+          "counter_Dc3UaX": {
+            "type": "Counter",
+            "settings": {
+              "counter_number": "120",
+              "counter_title": "cities"
+            }
+          }
+        },
+        "block_order": [
+          "counter_b8dYRe",
+          "counter_cFRtrY",
+          "counter_iE7U3x",
+          "counter_Dc3UaX"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -243,7 +284,8 @@
       "offer_banner_xYaGxY",
       "app_download_CBCwtC",
       "cheef_M4jhig",
-      "testimonial_cjbYm4"
+      "testimonial_cjbYm4",
+      "counter_63H7dJ"
     ]
   },
   "presets": {
