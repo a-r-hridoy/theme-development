@@ -2197,10 +2197,10 @@ header .header_right .nice-select:after {
 .app_download_img::after {
     position: absolute;
     content: "";
-    background: url(../images/download_shapes.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(https://cdn.shopify.com/s/files/1/0648/4908/4594/files/download_shapes.png?v=1711002347) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     top: 105px;
     right: 40px;
     width: 400px;
