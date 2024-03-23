@@ -253,7 +253,7 @@
 
 <div class="menu_search_area">
   <form action="{{ routes.search_url }}">
-    <input type="text" placeholder="Search Item...">
+    <input type="text" name="q" value="{{ search.terms | escape }}" placeholder="Search Item...">
     <button class="common_btn" type="submit">Search</button>
     <span class="close_search"><i class="far fa-times"></i></span>
   </form>
