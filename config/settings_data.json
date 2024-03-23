@@ -1,7 +1,7 @@
 {
   "current": {
-    "font_heading": "alfie_n4",
-    "font_body": "alfie_n4",
+    "font_heading": "sans-serif",
+    "font_body": "sans-serif",
     "sections": {
       "collection-list": {
         "type": "collection-list",
