@@ -1,6 +1,101 @@
+<!--
+  ==========================
+      APP DOWNLOAD START
+  ===========================
+-->
+<section class="app_download pt_120 xs_pt_100">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-xxl-5 col-md-6 col-lg-5 wow fadeInLeft">
+        <div class="app_download_img">
+          <img
+            src="{{ section.settings.app_download_img | img_url: 'large' }}"
+            alt="download"
+            width="auto"
+            height="auto"
+          >
+        </div>
+      </div>
+      <div class="col-xxl-5 col-md-6 col-lg-6 wow fadeInRight">
+        <div class="app_download_text">
+          <h2>{{ section.settings.app_download_title }}</h2>
+          <p>{{ section.settings.app_download_description }}</p>
+          <ul class="d-flex flex-wrap">
+            <li>
+              <a class="common_btn" href="#">
+                <span class="icon">
+                  <img
+                    src="{{ section.settings.app_store_icon | img_url: 'original' }}"
+                    alt="download"
+                    width="auto"
+                    height="auto"
+                  >
+                </span>
+                Apple Store</a
+              >
+            </li>
+            <li>
+              <a class="common_btn" href="#">
+                <span class="icon">
+                  <img
+                    src="{{ section.settings.play_store_icon | img_url: 'original' }}"
+                    alt="download"
+                    width="auto"
+                    height="auto"
+                  >
+                </span>
+                Play Story</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+  ==========================
+      APP DOWNLOAD END
+  ===========================
+-->
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "App Download",
+  "settings": [
+     {
+    "type": "image_picker",
+    "id": "app_download_img",
+    "label": "App Download Img"
+    },
+    {
+    "type": "text",
+    "id": "app_download_title",
+    "label": "App Download Title",
+    "default": "Are you Ready to Start your Order"
+    },
+      {
+      "type": "text",
+      "id": "app_download_description",
+      "label": "App Download Description",
+      "default": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim."
+    },
+    {
+    "type": "image_picker",
+    "id": "app_store_icon",
+    "label": "App Store Icon"
+    },
+    {
+    "type": "image_picker",
+    "id": "play_store_icon",
+    "label": "Play Store Icon"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "App Download"
+    }
+  ]
+}
 {% endschema %}
