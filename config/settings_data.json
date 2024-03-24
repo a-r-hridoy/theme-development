@@ -1,8 +1,5 @@
 {
   "current": {
-    "font_heading": "sans-serif",
-    "font_body": "sans-serif",
-    "favicon": "shopify:\/\/shop_images\/testimonial_2_img_1.png",
     "sections": {
       "collection-list": {
         "type": "collection-list",
@@ -10,19 +7,16 @@
           "collection-list-0": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           },
           "collection-list-1": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           },
           "collection-list-2": {
             "type": "collection",
             "settings": {
-              "collection": ""
             }
           }
         },
@@ -32,13 +26,11 @@
           "collection-list-2"
         ],
         "settings": {
-          "title": "Collection list"
         }
       },
       "featured-collection": {
         "type": "featured-collection",
         "settings": {
-          "title": "Featured collection",
           "collection": "frontpage"
         }
       },
@@ -46,252 +38,12 @@
         "type": "featured-product",
         "settings": {
         }
-      },
-      "header": {
-        "type": "header",
-        "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_width": 70,
-          "cartIconImg": "shopify:\/\/shop_images\/cart_icon_1.png",
-          "user_icon": "shopify:\/\/shop_images\/user_icon_f5827466-a8b5-4241-af3a-46fe29314d78.png",
-          "menu": "main-menu"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "settings": {
-          "footer_logo": "shopify:\/\/shop_images\/footer_logo.png",
-          "footer_post_1": "shopify:\/\/shop_images\/footer_post_img_1.jpg",
-          "footer_post_2": "shopify:\/\/shop_images\/footer_post_img_2.jpg"
-        }
-      },
-      "home_EAwqgG": {
-        "type": "Home",
-        "settings": {
-          "banner_image": "shopify:\/\/shop_images\/banner_img.png",
-          "background_image": "shopify:\/\/shop_images\/banner_bg.jpg",
-          "title": "DELICIOUS FOOD",
-          "intro_text": "SPECIAL FOODS FOR YOUR EATING",
-          "rte": "<p>Commodo ullamcorper a lacus vestibulum sed arcu non. Non blandit massa enim Sem viverra aliquet eget sit amet tellus cras<\/p>",
-          "pickup_button_text": "Picup",
-          "delivery_button_text": "Delivery"
-        }
-      },
-      "categories_AK6wVM": {
-        "type": "categories",
-        "blocks": {
-          "slider_ynfTJ3": {
-            "type": "slider",
-            "settings": {
-              "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
-              "title": "pizza",
-              "btn_url": ""
-            }
-          },
-          "slider_PnVaxG": {
-            "type": "slider",
-            "settings": {
-              "categories_img": "shopify:\/\/shop_images\/category_img_2.jpg",
-              "title": "desert",
-              "btn_url": ""
-            }
-          },
-          "slider_RU4Wt3": {
-            "type": "slider",
-            "settings": {
-              "categories_img": "shopify:\/\/shop_images\/category_img_4.jpg",
-              "title": "drink",
-              "btn_url": ""
-            }
-          },
-          "slider_yD9qTA": {
-            "type": "slider",
-            "settings": {
-              "categories_img": "shopify:\/\/shop_images\/category_img_3.jpg",
-              "title": "burger",
-              "btn_url": ""
-            }
-          },
-          "slider_AYeEU8": {
-            "type": "slider",
-            "settings": {
-              "categories_img": "shopify:\/\/shop_images\/category_img_1.jpg",
-              "title": "Pizza",
-              "btn_url": ""
-            }
-          }
-        },
-        "block_order": [
-          "slider_ynfTJ3",
-          "slider_PnVaxG",
-          "slider_RU4Wt3",
-          "slider_yD9qTA",
-          "slider_AYeEU8"
-        ],
-        "settings": {
-          "Categories_title": "Popular category"
-        }
-      },
-      "app_download_CBCwtC": {
-        "type": "app_download",
-        "settings": {
-          "app_download_img": "shopify:\/\/shop_images\/download_img.png",
-          "app_download_title": "Are you Ready to Start your Order",
-          "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim.",
-          "app_store_icon": "shopify:\/\/shop_images\/apple_icon_35cdbe3a-884d-4a94-9473-f66bcbd09a8e.png",
-          "play_store_icon": "shopify:\/\/shop_images\/play_store_icon_b5a6ed9f-61a7-4e6a-bf3f-a2bd7c8406b3.png"
-        }
-      },
-      "offer_banner_xYaGxY": {
-        "type": "offer-banner",
-        "settings": {
-          "saleImage": "shopify:\/\/shop_images\/cart_icon_1.png",
-          "icon_image": "shopify:\/\/shop_images\/add_banner_full_img.png",
-          "background_image": "shopify:\/\/shop_images\/1image_here.png",
-          "subtitle": "TODAY SPECIAL OFFER",
-          "title": "DELICIOUS FOOD WITH US."
-        }
-      },
-      "cheef_M4jhig": {
-        "type": "cheef",
-        "blocks": {
-          "our_chef_WNe6KD": {
-            "type": "our_chef",
-            "settings": {
-              "chef_img": "shopify:\/\/shop_images\/chef_img_1.jpg",
-              "chef_title": "Main Chef",
-              "chef_name": "Nathaneal Down"
-            }
-          },
-          "our_chef_NqjV9c": {
-            "type": "our_chef",
-            "settings": {
-              "chef_img": "shopify:\/\/shop_images\/chef_img_2.jpg",
-              "chef_title": "Executive Chef",
-              "chef_name": "Pelican Steve"
-            }
-          },
-          "our_chef_eRDg4d": {
-            "type": "our_chef",
-            "settings": {
-              "chef_img": "shopify:\/\/shop_images\/chef_img_3.jpg",
-              "chef_title": "Master Chef",
-              "chef_name": "Dylan Meringue"
-            }
-          },
-          "our_chef_iHqBQ7": {
-            "type": "our_chef",
-            "settings": {
-              "chef_img": "shopify:\/\/shop_images\/chef_img_4.jpg",
-              "chef_title": "Executive Chef",
-              "chef_name": "Fergus Douchebag"
-            }
-          }
-        },
-        "block_order": [
-          "our_chef_WNe6KD",
-          "our_chef_NqjV9c",
-          "our_chef_eRDg4d",
-          "our_chef_iHqBQ7"
-        ],
-        "settings": {
-          "section_title": "Meet Our special Chefs",
-          "veiw_icon": "shopify:\/\/shop_images\/eye.png",
-          "view_more_btn": "View All Chef",
-          "btn_url": ""
-        }
-      },
-      "testimonial_cjbYm4": {
-        "type": "testimonial",
-        "blocks": {
-          "testimonial_7qbqqx": {
-            "type": "Testimonial",
-            "settings": {
-              "testimonial_img": "shopify:\/\/shop_images\/client_img_1.png",
-              "testimonial_name": "Indigo Violet",
-              "testimonial_title": "Co - Founder",
-              "testimonial_description": "\"I love that solvency lets us manage everything in one place. It's super helpful to be able to listen to voice samples, upload our  own lists, and find quality salespeople that can grow with our team.\""
-            }
-          },
-          "testimonial_Recahz": {
-            "type": "Testimonial",
-            "settings": {
-              "testimonial_img": "shopify:\/\/shop_images\/client_img_2.png",
-              "testimonial_name": "jihan ahmed",
-              "testimonial_title": "Co - Founder",
-              "testimonial_description": "\"I love that solvency lets us manage everything in one place. It's super helpful to be able to listen to voice samples, upload our own lists, and find quality salespeople that can grow with our team.\""
-            }
-          }
-        },
-        "block_order": [
-          "testimonial_7qbqqx",
-          "testimonial_Recahz"
-        ],
-        "settings": {
-          "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg",
-          "video_url": "shopify:\/\/files\/videos\/Fashion - Google Chrome 2023-11-04 12-09-30.mp4"
-        }
-      },
-      "add_banner_fzerq7": {
-        "type": "add-banner",
-        "settings": {
-          "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
-          "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
-          "background_image_2": "shopify:\/\/shop_images\/small_banner_img_1.jpg",
-          "ct_banner_title_2": "GREAT VALUE MIXED DRINKS"
-        }
-      },
-      "counter_63H7dJ": {
-        "type": "counter",
-        "blocks": {
-          "counter_b8dYRe": {
-            "type": "Counter",
-            "settings": {
-              "counter_number": "45",
-              "counter_title": "deshes"
-            }
-          },
-          "counter_cFRtrY": {
-            "type": "Counter",
-            "settings": {
-              "counter_number": "68",
-              "counter_title": "locations"
-            }
-          },
-          "counter_iE7U3x": {
-            "type": "Counter",
-            "settings": {
-              "counter_number": "32",
-              "counter_title": "chefs"
-            }
-          },
-          "counter_Dc3UaX": {
-            "type": "Counter",
-            "settings": {
-              "counter_number": "120",
-              "counter_title": "cities"
-            }
-          }
-        },
-        "block_order": [
-          "counter_b8dYRe",
-          "counter_cFRtrY",
-          "counter_iE7U3x",
-          "counter_Dc3UaX"
-        ],
-        "settings": {
-        }
       }
     },
     "content_for_index": [
-      "home_EAwqgG",
-      "categories_AK6wVM",
-      "add_banner_fzerq7",
-      "offer_banner_xYaGxY",
-      "app_download_CBCwtC",
-      "cheef_M4jhig",
-      "testimonial_cjbYm4",
-      "counter_63H7dJ"
+      "collection-list",
+      "featured-collection",
+      "featured-product"
     ]
   },
   "presets": {
