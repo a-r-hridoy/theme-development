@@ -129,6 +129,7 @@
           "slider_yD9qTA",
           "slider_AYeEU8"
         ],
+        "disabled": true,
         "settings": {
           "Categories_title": "Popular category"
         }
@@ -196,6 +197,7 @@
           "our_chef_eRDg4d",
           "our_chef_iHqBQ7"
         ],
+        "disabled": true,
         "settings": {
           "section_title": "Meet Our special Chefs",
           "veiw_icon": "shopify:\/\/shop_images\/eye.png",
@@ -283,6 +285,7 @@
           "counter_iE7U3x",
           "counter_Dc3UaX"
         ],
+        "disabled": true,
         "settings": {
         }
       }
