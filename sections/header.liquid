@@ -122,6 +122,9 @@
                     {% if child_link.active %}
                       class="active {% if child_link.child_active %}child-active{% endif %}"
                     {% endif %}
+                    {% if child_link.links != blank %}
+                      <li><a href= "{{ child_link.url }}">{{ child_link.title }}</a>
+                      {% endif %}
                   >
                     <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
                   </li>
