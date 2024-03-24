@@ -98,126 +98,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#"
-            >Home
-            <i class="fal fa-plus"></i>
-          </a>
-          <ul class="droap_menu">
-            <li>
-              <a class="active" href="index.html">home 01 (Restaurent)</a>
-            </li>
-            <li>
-              <a href="index_2.html">home 02 (CP)</a>
-            </li>
-            <li>
-              <a href="index_3.html">home 03 (Restaurent)</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            >About
-            <i class="fal fa-plus"></i>
-          </a>
-          <ul class="droap_menu">
-            <li>
-              <a href="about_us_01.html">about style 01</a>
-            </li>
-            <li>
-              <a href="about_us_02.html">about style 02</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            >Menu
-            <i class="fal fa-plus"></i>
-          </a>
-          <ul class="droap_menu">
-            <li>
-              <a href="menu_01.html">menu style 01</a>
-            </li>
-            <li>
-              <a href="menu_02.html">menu style 02</a>
-            </li>
-            <li>
-              <a href="menu_03.html">menu list view</a>
-            </li>
-            <li>
-              <a href="menu_details.html">menu details</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            >Pages
-            <i class="fal fa-plus"></i>
-          </a>
-          <ul class="droap_menu">
-            <li>
-              <a href="blogs.html">blogs</a>
-            </li>
-            <li>
-              <a href="blog_details.html">blog details</a>
-            </li>
-            <li>
-              <a href="chefs.html">chefs</a>
-            </li>
-            <li>
-              <a href="chefs_details.html">chef details</a>
-            </li>
-            <li>
-              <a href="cart_view.html">cart view</a>
-            </li>
-            <li>
-              <a href="checkout.html">checkout</a>
-            </li>
-            <li>
-              <a href="dashboard.html">dashboard</a>
-            </li>
-            <li>
-              <a href="faq.html">FAQ's</a>
-            </li>
-            <li>
-              <a href="payment.html">payment</a>
-            </li>
-            <li>
-              <a href="reservation.html">reservation</a>
-            </li>
-            <li>
-              <a href="service.html">service</a>
-            </li>
-            <li>
-              <a href="service_details.html">service details</a>
-            </li>
-            <li>
-              <a href="sign_in.html">sign in</a>
-            </li>
-            <li>
-              <a href="sign_up.html">sign up</a>
-            </li>
-            <li>
-              <a href="forgot_password.html">forgot password</a>
-            </li>
-            <li>
-              <a href="privacy_policy.html">privacy policy</a>
-            </li>
-            <li>
-              <a href="terms_condition.html">terms & condition</a>
-            </li>
-            <li>
-              <a href="error.html">error/404</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="branch.html">Branch</a>
-        </li>
+        {% for link in linklists['main-menu'].links %}
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ link.url }}">
+              {{- link.title }}
+              <i class="fal fa-plus"></i
+            ></a>
+            {% if link.links != blank %}
+              <ul class="droap_menu">
+                {% for child_link in link.links %}
+                  <li>
+                    <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
       </ul>
+
       <ul class="menu_right">
         <li>
           <a class="menu_search">
