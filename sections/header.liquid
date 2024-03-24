@@ -74,11 +74,15 @@
 <nav class="navbar navbar-expand-lg main_menu">
   <div class="container container_large">
     <a class="navbar-brand" href="index.html">
-      <img
-        style="width:{{ section.settings.logo_width }}px !important"
-        src="{{ logo | img_url: 'original' }}"
-        alt="{{ shop.name }}"
-      >
+      {% if logo %}
+        <img
+          style="width:{{ section.settings.logo_width }}px !important"
+          src="{{ logo | img_url: 'original' }}"
+          alt="{{ shop.name }}"
+        >
+      {% else %}
+        <span>{{ shop.name }}</span>
+      {% endif %}
     </a>
     <button
       class="navbar-toggler"
