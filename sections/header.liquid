@@ -121,8 +121,6 @@
                     class="menu-link"
                     {% if child_link.active %}
                       class="active {% if child_link.child_active %}child-active{% endif %}"
-                    {% else %}
-                      class="{% if child_link %}child-active{% endif %}"
                     {% endif %}
                   >
                     <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
