@@ -105,10 +105,12 @@
               class="active {% if link.child_active %}child-active{% endif %}"
             {% endif %}
           >
-            <a class="nav-link active" href="{{ link.url }}">
-              {{- link.title }}
-              <i class="fal fa-plus"></i
-            ></a>
+            {% if link.links != blank %}
+              <a class="nav-link active" href="{{ link.url }}">
+                {{- link.title }}
+            {% else %}
+              <i class="fal fa-plus"></i></a>
+            {% endif %}
 
             {% if link.links.size > 0 %}
               <ul class="menu dropdown-child droap_menu">
