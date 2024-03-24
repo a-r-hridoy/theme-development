@@ -100,7 +100,7 @@
       <ul class="navbar-nav me-auto menu">
         {% for link in section.settings.menu.links %}
           <li class="nav-item ">
-            <a class="nav-link {% if nav-link.active %} active {% endif %}" href="{{ link.url }}">{{- link.title }}<i class="fal fa-plus"></i></a>
+            <a class="nav-link {% if link.active %} active {% endif %}" href="{{ link.url }}">{{- link.title }}<i class="fal fa-plus"></i></a>
               <ul class="menu dropdown-child droap_menu">
                   <li class="menu-link">
                     <a class="" href="#">title</a>
