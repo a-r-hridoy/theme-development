@@ -108,8 +108,10 @@
             {% if link.links != blank %}
               <a class="nav-link active" href="{{ link.url }}">
                 {{- link.title }}
+                <i class="fal fa-plus"></i
+              ></a>
             {% else %}
-              <i class="fal fa-plus"></i></a>
+              <a class="nav-link active" href="{{ link.url }}">{{- link.title }}</a>
             {% endif %}
 
             {% if link.links.size > 0 %}
