@@ -49,8 +49,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/service_8.jpg",
-          "logo_width": 240,
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_width": 70,
           "cartIconImg": "shopify:\/\/shop_images\/cart_icon_1.png",
           "user_icon": "shopify:\/\/shop_images\/user_icon_f5827466-a8b5-4241-af3a-46fe29314d78.png",
           "menu": ""
