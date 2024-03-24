@@ -2,6 +2,7 @@
   "current": {
     "font_heading": "sans-serif",
     "font_body": "sans-serif",
+    "favicon": "shopify:\/\/shop_images\/logo.png",
     "sections": {
       "collection-list": {
         "type": "collection-list",
