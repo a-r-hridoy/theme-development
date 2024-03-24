@@ -74,13 +74,16 @@
 <nav class="navbar navbar-expand-lg main_menu">
   <div class="container container_large">
     <a class="navbar-brand" href="index.html">
-      <img
-        style="widht:{{ section.settings.logo_width }}px"
-        src="{{ logo | img_url: 'original' }}"
-        alt="{{ shop.name }}"
-        width="auto"
-        height="auto"
-      >
+      <!--
+        <img
+          style="widht:{{ section.settings.logo_width }}px"
+          src="{{ logo | img_url: 'original' }}"
+          alt="{{ shop.name }}"
+          width="auto"
+          height="auto"
+        >
+      -->
+      <img style="width: {{ section.settings.logo_width }}" src="{{ logo | image_url:'original' }}">
     </a>
     <button
       class="navbar-toggler"
