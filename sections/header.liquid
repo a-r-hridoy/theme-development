@@ -280,12 +280,15 @@
         <li>
           <a class="menu_order common_btn" href="menu_03.html">
             <span class="icon">
-              <img
-                src="{{ cartIconImg | img_url: 'original' }}"
-                alt="{{ shop.name }}"
-                width="50"
-                height="50"
-              >
+              <!--
+                <img
+                  src="{{ cartIconImg | img_url: 'original' }}"
+                  alt="{{ shop.name }}"
+                  width="50"
+                  height="50"
+                >
+              -->
+              {{ cart_icon_2 | asset_img_url: 'large' }}}
             </span>
             order now
           </a>
