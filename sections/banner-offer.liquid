@@ -1,0 +1,74 @@
+<section
+  class="add_banner_full mt_140 xs_mt_100 pt_155 xs_pt_100 pb_155 xs_pb_100"
+  style="background-image: url('{{ section.settings.background_image | img_url: 'original' }}');"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5 col-md-6 wow fadeInLeft">
+        <div class="add_banner_full_text">
+          <h4>{{ section.settings.subtitle }}</h4>
+          <h2>{{ section.settings.title }}</h2>
+          <a class="common_btn" href="menu_details.html">
+            <span class="icon">
+              <img
+                src="{{ section.settings.saleImage | img_url: 'original' }}"
+                alt="{{ section.settings.saleImage }} "
+                width="auto"
+                height="auto"
+              >
+            </span>
+            order now
+          </a>
+          <div class="img">
+            <img
+              src="{{ section.settings.icon_image | img_url: 'original' }}"
+              alt="{{ section.settings.icon_image }} "
+              width="auto"
+              height="auto"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner Offer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "saleImage",
+      "label": "Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Sub Title",
+      "default": "TODAY SPECIAL OFFER"
+    }, {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "DELICIOUS FOOD WITH US."
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Banner Offer"
+    }
+  ]
+}
+{% endschema %}
