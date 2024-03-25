@@ -67,6 +67,7 @@
       },
       "home_EAwqgG": {
         "type": "Home",
+        "disabled": true,
         "settings": {
           "banner_image": "shopify:\/\/shop_images\/banner_img.png",
           "background_image": "shopify:\/\/shop_images\/banner_bg.jpg",
@@ -128,12 +129,14 @@
           "slider_yD9qTA",
           "slider_AYeEU8"
         ],
+        "disabled": true,
         "settings": {
           "Categories_title": "Popular category"
         }
       },
       "app_download_CBCwtC": {
         "type": "app_download",
+        "disabled": true,
         "settings": {
           "app_download_img": "shopify:\/\/shop_images\/download_img.png",
           "app_download_title": "Are you Ready to Start your Order",
@@ -224,6 +227,7 @@
       },
       "add_banner_fzerq7": {
         "type": "add-banner",
+        "disabled": true,
         "settings": {
           "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
           "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
@@ -274,6 +278,7 @@
       },
       "banner_offer_AFGRJF": {
         "type": "banner-offer",
+        "disabled": true,
         "settings": {
           "saleImage": "shopify:\/\/shop_images\/cart_icon_1.png",
           "icon_image": "shopify:\/\/shop_images\/add_banner_full_img.png",
