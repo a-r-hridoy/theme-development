@@ -112,7 +112,7 @@
             {% if link.links.size > 0 %}
               <ul class="menu dropdown-child droap_menu">
                 {% for child_link in link.links %}
-                  <li class="menu-link {% if child_link.active %}{% if child_link.child_active %}child-active{% endif %}{% endif %}">
+                  <li class="menu-link">
                     <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
                   </li>
                 {% endfor %}
