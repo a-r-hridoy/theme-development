@@ -101,7 +101,7 @@
         {% for link in section.settings.menu.links %}
           <li class="nav-item active">
             {% if link.links != blank %}
-              <a class="nav-link active" href="{{ link.url }}">
+              <a class="nav-link " href="{{ link.url }}">
                 {{- link.title }}
                 <i class="fal fa-plus"></i>
               </a>
