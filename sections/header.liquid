@@ -99,21 +99,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto menu">
         {% for link in section.settings.menu.links %}
-          <li class="nav-item active">
+          <li class="nav-item {% if link.active %}{% if link.child_active %}child-active{% endif %}{% endif %}">
             {% if link.links != blank %}
-              <a class="nav-link {% if link.active %}active{% endif %} href="{{ link.url }}">
+              <a class="nav-link active" href="{{ link.url }}">
                 {{- link.title }}
                 <i class="fal fa-plus"></i>
               </a>
             {% else %}
-              <a class="nav-link {% if link.active %}active{% endif %}" href="{{ link.url }}">{{- link.title }}</a>
+              <a class="nav-link active" href="{{ link.url }}">{{- link.title }}</a>
             {% endif %}
 
             {% if link.links.size > 0 %}
               <ul class="menu dropdown-child droap_menu">
                 {% for child_link in link.links %}
-                  <li class="menu-link {% if link.active %}{% if link.child_active %}child-active{% endif %}{% endif %}>
-                    <a class="{% if link.active %}active{% endif %}" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  <li class="menu-link {% if child_link.active %}{% if child_link.child_active %}child-active{% endif %}{% endif %}">
+                    <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
