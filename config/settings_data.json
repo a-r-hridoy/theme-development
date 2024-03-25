@@ -271,12 +271,23 @@
         ],
         "settings": {
         }
+      },
+      "banner_offer_AFGRJF": {
+        "type": "banner-offer",
+        "settings": {
+          "saleImage": "shopify:\/\/shop_images\/cart_icon_1.png",
+          "icon_image": "shopify:\/\/shop_images\/add_banner_full_img.png",
+          "background_image": "shopify:\/\/shop_images\/1image_here.png",
+          "subtitle": "TODAY SPECIAL OFFER",
+          "title": "DELICIOUS FOOD WITH US."
+        }
       }
     },
     "content_for_index": [
       "home_EAwqgG",
       "categories_AK6wVM",
       "add_banner_fzerq7",
+      "banner_offer_AFGRJF",
       "app_download_CBCwtC",
       "cheef_M4jhig",
       "testimonial_cjbYm4",
