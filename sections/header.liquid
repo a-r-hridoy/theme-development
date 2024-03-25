@@ -99,7 +99,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto menu">
         {% for link in section.settings.menu.links %}
-          <li class="nav-item {% if link.active %}{% if link.child_active %}child-active{% endif %}{% endif %}">
+          <li class="nav-item {% if section.settings.menu.links.active %}{% if section.settings.menu.links.child_active %}child-active{% endif %}{% endif %}">
             {% if link.links != blank %}
               <a class="nav-link active" href="{{ link.url }}">
                 {{- link.title }}
