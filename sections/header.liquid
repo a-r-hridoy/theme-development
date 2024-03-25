@@ -98,27 +98,57 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        {% for menuItem in menuData %}
-          <li class="nav-item">
-            <a class="nav-link {% if menuItem.submenu %}active{% endif %}" href="{{ menuItem.url }}">
-              {{ menuItem.title }}
-              {% if menuItem.submenu %}
-                <i class="fal fa-plus"></i>
-              {% endif %}
-            </a>
-            {% if menuItem.submenu %}
-              <ul class="droap_menu">
-                {% for submenuItem in menuItem.submenu %}
-                  <li>
-                    <a class="{% if submenuItem.active %}active{% endif %}" href="{{ submenuItem.url }}">
-                      {{- submenuItem.title -}}
-                    </a>
-                  </li>
-                {% endfor %}
+        {% assign menuItems = "Home,index.html,home 01 (Restaurent);
+    About,about_us_01.html,about style 01;
+    About,about_us_02.html,about style 02;
+    Menu,menu_01.html,menu style 01;
+    Menu,menu_02.html,menu style 02;
+    Menu,menu_03.html,menu list view;
+    Menu,menu_details.html,menu details;
+    Pages,blogs.html,blogs;
+    Pages,blog_details.html,blog details;
+    Pages,chefs.html,chefs;
+    Pages,chefs_details.html,chef details;
+    Pages,cart_view.html,cart view;
+    Pages,checkout.html,checkout;
+    Pages,dashboard.html,dashboard;
+    Pages,faq.html,FAQ's;
+    Pages,payment.html,payment;
+    Pages,reservation.html,reservation;
+    Pages,service.html,service;
+    Pages,service_details.html,service details;
+    Pages,sign_in.html,sign in;
+    Pages,sign_up.html,sign up;
+    Pages,forgot_password.html,forgot password;
+    Pages,privacy_policy.html,privacy policy;
+    Pages,terms_condition.html,terms & condition;
+    Pages,error.html,error/404;
+    Contact,contact.html,Contact;
+    Branch,branch.html,Branch"
+          | split: ';'
+        %}
+
+        {% for menuItem in menuItems %}
+          {% assign parts = menuItem | split: ',' %}
+          {% if parts[0] != prevMenu %}
+            {% if prevMenu %}
               </ul>
+              </li>
             {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{ parts[0] }}</a>
+              <ul class="droap_menu">
+          {% endif %}
+          <li>
+            <a href="{{ parts[1] }}">{{ parts[2] }}</a>
           </li>
+          {% assign prevMenu = parts[0] %}
         {% endfor %}
+
+        {% if prevMenu %}
+          </ul>
+          </li>
+        {% endif %}
       </ul>
 
       <!--
@@ -313,22 +343,6 @@
       RTL BUTTON END
   ===========================
 -->
-
-{ "menuData": [ { "title": "Home", "url": "#", "submenu": [ {"title": "home 01 (Restaurent)", "url": "index.html"},
-{"title": "home 02 (CP)", "url": "index_2.html"}, {"title": "home 03 (Restaurent)", "url": "index_3.html"} ] }, {
-"title": "About", "url": "#", "submenu": [ {"title": "about style 01", "url": "about_us_01.html"}, {"title": "about
-style 02", "url": "about_us_02.html"} ] }, { "title": "Menu", "url": "#", "submenu": [ {"title": "menu style 01", "url":
-"menu_01.html"}, {"title": "menu style 02", "url": "menu_02.html"}, {"title": "menu list view", "url": "menu_03.html"},
-{"title": "menu details", "url": "menu_details.html"} ] }, { "title": "Pages", "url": "#", "submenu": [ {"title":
-"blogs", "url": "blogs.html"}, {"title": "blog details", "url": "blog_details.html"}, {"title": "chefs", "url":
-"chefs.html"}, {"title": "chef details", "url": "chefs_details.html"}, {"title": "cart view", "url": "cart_view.html"},
-{"title": "checkout", "url": "checkout.html"}, {"title": "dashboard", "url": "dashboard.html"}, {"title": "FAQ's",
-"url": "faq.html"}, {"title": "payment", "url": "payment.html"}, {"title": "reservation", "url": "reservation.html"},
-{"title": "service", "url": "service.html"}, {"title": "service details", "url": "service_details.html"}, {"title":
-"sign in", "url": "sign_in.html"}, {"title": "sign up", "url": "sign_up.html"}, {"title": "forgot password", "url":
-"forgot_password.html"}, eta"}, {"title": "privacy policy", "url": "privacy_policy.html"}, {"title": "terms &
-condition", "url": "terms_condition.html"}, {"title": "error/404", "url": "error.html"} ] }, {"title": "Contact", "url":
-"contact.html"}, {"title": "Branch", "url": "branch.html"} ] }
 
 {% schema %}
 {
