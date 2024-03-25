@@ -67,7 +67,6 @@
       },
       "home_EAwqgG": {
         "type": "Home",
-        "disabled": true,
         "settings": {
           "banner_image": "shopify:\/\/shop_images\/banner_img.png",
           "background_image": "shopify:\/\/shop_images\/banner_bg.jpg",
@@ -129,30 +128,18 @@
           "slider_yD9qTA",
           "slider_AYeEU8"
         ],
-        "disabled": true,
         "settings": {
           "Categories_title": "Popular category"
         }
       },
       "app_download_CBCwtC": {
         "type": "app_download",
-        "disabled": true,
         "settings": {
           "app_download_img": "shopify:\/\/shop_images\/download_img.png",
           "app_download_title": "Are you Ready to Start your Order",
           "app_download_description": "Commodo ullamcorper lacus vestibulum sed Non blandit massa enim.",
           "app_store_icon": "shopify:\/\/shop_images\/apple_icon_35cdbe3a-884d-4a94-9473-f66bcbd09a8e.png",
           "play_store_icon": "shopify:\/\/shop_images\/play_store_icon_b5a6ed9f-61a7-4e6a-bf3f-a2bd7c8406b3.png"
-        }
-      },
-      "offer_banner_xYaGxY": {
-        "type": "offer-banner",
-        "settings": {
-          "saleImage": "shopify:\/\/shop_images\/cart_icon_1.png",
-          "icon_image": "shopify:\/\/shop_images\/add_banner_full_img.png",
-          "background_image": "shopify:\/\/shop_images\/1image_here.png",
-          "subtitle": "TODAY SPECIAL OFFER",
-          "title": "DELICIOUS FOOD WITH US."
         }
       },
       "cheef_M4jhig": {
@@ -197,7 +184,6 @@
           "our_chef_eRDg4d",
           "our_chef_iHqBQ7"
         ],
-        "disabled": true,
         "settings": {
           "section_title": "Meet Our special Chefs",
           "veiw_icon": "shopify:\/\/shop_images\/eye.png",
@@ -231,7 +217,6 @@
           "testimonial_7qbqqx",
           "testimonial_Recahz"
         ],
-        "disabled": true,
         "settings": {
           "background_image": "shopify:\/\/shop_images\/testimonial_bg.jpg",
           "video_url": "shopify:\/\/files\/videos\/Fashion - Google Chrome 2023-11-04 12-09-30.mp4"
@@ -239,7 +224,6 @@
       },
       "add_banner_fzerq7": {
         "type": "add-banner",
-        "disabled": true,
         "settings": {
           "background_image_1": "shopify:\/\/shop_images\/large_banner_img_2.jpg",
           "ct_banner_title_1": "THE BEST BURGER PLACE IN TOWN",
@@ -285,7 +269,6 @@
           "counter_iE7U3x",
           "counter_Dc3UaX"
         ],
-        "disabled": true,
         "settings": {
         }
       }
@@ -294,7 +277,6 @@
       "home_EAwqgG",
       "categories_AK6wVM",
       "add_banner_fzerq7",
-      "offer_banner_xYaGxY",
       "app_download_CBCwtC",
       "cheef_M4jhig",
       "testimonial_cjbYm4",
