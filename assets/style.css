@@ -9522,6 +9522,11 @@ footer .footer_info ul li a.linkedin:hover {
     border-color: var(--colorYellow);
 }
 
+
+li.nav-item.active.child_active a {
+    color: red !important;
+}
+
 /*=============================
     RTL BUTTON END
 =============================*/
