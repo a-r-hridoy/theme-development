@@ -97,26 +97,20 @@
       <i class="far fa-times close_icon"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
-<ul class="navbar-nav me-auto menu">
+      <ul class="navbar-nav me-auto menu">
         {% for link in section.settings.menu.links %}
-          <li
-            class="nav-item {% if link.child_active %}active{% endif %}
-            
-             {% if link.child_active %}child_active{% endif %}" >
-              <a class="nav-link {{ link.child_active }} " href="{{ link.url }}">
-                {{- link.title }}
-                <i class="fal fa-plus"></i></a>
+          <li class="nav-item {% if link.child_active %}active{% endif %}">
+            <a class="nav-link {% if link.child_active %}active{% endif %}" href="{{ link.url }}">
+              {{- link.title }}
+              <i class="fal fa-plus"></i>
+            </a>
             {% if link.links.size > 0 %}
               <ul class="menu dropdown-child droap_menu">
                 {% for child_link in link.links %}
-                  <li
-                    class="menu-link"
-                    {% if child_link.active %}
-                      class="active {% if child_link.child_active %}child-active{% endif %}"
-                    {% endif %}
-                  >
-                    <a class="active" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  <li class="menu-link {% if child_link.active %}active{% endif %} {% if child_link.child_active %}child-active{% endif %}">
+                    <a class="{% if child_link.active %}active{% endif %}" href="{{ child_link.url }}">
+                      {{- child_link.title -}}
+                    </a>
                   </li>
                 {% endfor %}
               </ul>
